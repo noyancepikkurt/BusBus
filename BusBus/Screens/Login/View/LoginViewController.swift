@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
@@ -19,6 +20,22 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonAction(_ sender: Any) {
+        
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authdata, error) in
+                if error != nil {
+                    UIAlertController.alertMessage(title: "Hata", message: error?.localizedDescription ?? "Hata", vc: self)
+                } else {
+                    self.performSegue(withIdentifier: "toOnboardingVC", sender: nil)
+                }
+            }
+        } else {
+            UIAlertController.alertMessage(title: "Hata", message: "Kullanıcı adı veya şifre girilmedi", vc: self)
+        }
+        
+        
+        
+        
         //Uygulama ikinci kez açılırsa tekrar onboarding ekranı gözükmemesi için
 //        let defaults = UserDefaults.standard
 //        if defaults.object(forKey: "FirstTime") == nil {
@@ -27,7 +44,7 @@ class LoginViewController: UIViewController {
 //        } else {
 //            performSegue(withIdentifier: "toHomeVC", sender: nil)
 //        }
-        performSegue(withIdentifier: "toOnboardingVC", sender: nil)
+        
     }
     
     
@@ -35,5 +52,8 @@ class LoginViewController: UIViewController {
         performSegue(withIdentifier: "toSignUpVC", sender: nil)
     }
     
+    @IBAction func LoginAsGuestButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "toOnboardingVC", sender: nil)
+    }
     
 }

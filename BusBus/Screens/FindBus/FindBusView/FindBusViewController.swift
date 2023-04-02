@@ -13,12 +13,12 @@ class FindBusViewController: UIViewController {
     @IBOutlet weak var destinationLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     var findBusCellArray = [FindBusModel]()
-    var boarding = ""
-    var destination = ""
-    var date = ""
-    var startedTime = ""
+    var boarding = String()
+    var destination = String()
+    var date = String()
+    var startedTime = String()
     var finishedTime = ["08:30","10:30","10:45","09:00","14:00","13:00"]
-    var price = ""
+    var price = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()

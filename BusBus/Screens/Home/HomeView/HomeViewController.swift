@@ -17,6 +17,8 @@ class HomeViewController: UIViewController {
     var cities = [String]()
     let toolBar = UIToolbar()
     let time = [8,10,9,7,11,10]
+    var findBusModel = [FindBusModel]()
+    var dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +26,6 @@ class HomeViewController: UIViewController {
         citiesConfig()
         pickerViewConfig()
         toolBarConfig()
-        
-        dateTextField.attributedPlaceholder = NSAttributedString(string: "Tarih Seçiniz", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray6])
         
     }
     @IBAction func findBusButtonAction(_ sender: Any) {
@@ -42,41 +42,41 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toFindBusVC" {
             let destination = segue.destination as? FindBusViewController
-            destination?.findBusCellArray = [FindBusModel(imageView: UIImage(named: "kamil_koc")!, timeLabel: "00:00", timeLeftLabel: "\(time[0])s 30dk", priceLabel: "400 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
-                                             FindBusModel(imageView: UIImage(named: "ben_turizm")!, timeLabel: "00:30", timeLeftLabel: "\(time[1])s", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
-                                             FindBusModel(imageView: UIImage(named: "izmir_turizm")!, timeLabel: "01:00", timeLeftLabel: "\(time[2])s 45dk", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
-                                             FindBusModel(imageView: UIImage(named: "metro")!, timeLabel: "02:00", timeLeftLabel: "\(time[3])s", priceLabel: "350 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
-                                             FindBusModel(imageView: UIImage(named: "pamukkale")!, timeLabel: "02:30", timeLeftLabel: "\(time[4])s 30dk", priceLabel: "400 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
-                                             FindBusModel(imageView: UIImage(named: "varan")!, timeLabel: "03:00", timeLeftLabel: "\(time[5])s", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text)]
+            destination?.findBusCellArray = [FindBusModel(imageView: UIImage(named: "kamil_koc")!, timeLabel: "00:00", timeLeftLabel: "\(time[0])s 30dk", priceLabel: "400 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "ben_turizm")!, timeLabel: "00:30", timeLeftLabel: "\(time[1])s", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),  FindBusModel(imageView: UIImage(named: "izmir_turizm")!, timeLabel: "01:00", timeLeftLabel: "\(time[2])s 45dk", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "metro")!, timeLabel: "02:00", timeLeftLabel: "\(time[3])s", priceLabel: "350 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "pamukkale")!, timeLabel: "02:30", timeLeftLabel: "\(time[4])s 30dk", priceLabel: "400 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "varan")!, timeLabel: "03:00", timeLeftLabel: "\(time[5])s", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text)]
             destination?.boarding = boardingFromTextField.text!
             destination?.destination = destinationTextField.text!
             destination?.date = dateTextField.text!
         }
     }
     
-    
+    @IBAction func todayButtonAction(_ sender: Any) {
+        let date = Date()
+        dateFormatter.dateFormat = "dd.MM.yy"
+        let result = dateFormatter.string(from: date)
+        dateTextField.text = result
+    }
     
     func datePickerConfig() {
         datePicker = UIDatePicker()
+        dateTextField.attributedPlaceholder = NSAttributedString(string: "Tarih Seçiniz", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray6])
         datePicker?.datePickerMode = .date
         dateTextField.inputView = datePicker
         datePicker?.addTarget(self, action: #selector(showDate(datePicker:)), for: .valueChanged)
     }
     
     @objc func showDate(datePicker: UIDatePicker) {
-        let dateFormatter = DateFormatter()
+        dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yy"
         let takenDate = dateFormatter.string(from: datePicker.date)
         dateTextField.text = takenDate
-        print(takenDate)
     }
     
     func citiesConfig() {
         cities = ["Adana", "Adıyaman", "Afyon", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Isparta", "İçel (Mersin)", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak", "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"]
         boardingFromTextField.inputView = boardingPickerView
         destinationTextField.inputView = destinationPickerView
-        
     }
+    
     
     func pickerViewConfig() {
         boardingPickerView.delegate = self

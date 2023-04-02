@@ -13,6 +13,10 @@
 		5D022E9B29D86469004F92F7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D022E9A29D86469004F92F7 /* LoginViewController.swift */; };
 		5D022EA029D8758B004F92F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D022E9F29D8758B004F92F7 /* HomeViewController.swift */; };
 		5D38D83229D9743B004AE21C /* SelectSeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D38D83129D9743B004AE21C /* SelectSeatViewController.swift */; };
+		5D97BC9B29D9FD7F00FD3ECA /* MyTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97BC9A29D9FD7F00FD3ECA /* MyTicketsViewController.swift */; };
+		5D97BC9E29DA02FF00FD3ECA /* MyTicketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97BC9C29DA02FF00FD3ECA /* MyTicketsTableViewCell.swift */; };
+		5D97BC9F29DA02FF00FD3ECA /* MyTicketsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D97BC9D29DA02FF00FD3ECA /* MyTicketsTableViewCell.xib */; };
+		5DA1286829D9E00A00FE9847 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1286729D9E00A00FE9847 /* SettingsViewController.swift */; };
 		5DC41AD929D97BDD002FE668 /* SelectSeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC41AD729D97BDD002FE668 /* SelectSeatCollectionViewCell.swift */; };
 		5DC41ADA29D97BDD002FE668 /* SelectSeatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC41AD829D97BDD002FE668 /* SelectSeatCollectionViewCell.xib */; };
 		5DC41AE929D99BB1002FE668 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC41AE829D99BB1002FE668 /* UserViewController.swift */; };
@@ -48,6 +52,10 @@
 		5D022E9A29D86469004F92F7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D022E9F29D8758B004F92F7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5D38D83129D9743B004AE21C /* SelectSeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatViewController.swift; sourceTree = "<group>"; };
+		5D97BC9A29D9FD7F00FD3ECA /* MyTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewController.swift; sourceTree = "<group>"; };
+		5D97BC9C29DA02FF00FD3ECA /* MyTicketsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsTableViewCell.swift; sourceTree = "<group>"; };
+		5D97BC9D29DA02FF00FD3ECA /* MyTicketsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTicketsTableViewCell.xib; sourceTree = "<group>"; };
+		5DA1286729D9E00A00FE9847 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5DC41AD729D97BDD002FE668 /* SelectSeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatCollectionViewCell.swift; sourceTree = "<group>"; };
 		5DC41AD829D97BDD002FE668 /* SelectSeatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSeatCollectionViewCell.xib; sourceTree = "<group>"; };
 		5DC41AE829D99BB1002FE668 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +116,8 @@
 		5D022E9329D8510E004F92F7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5D97BC9729D9FD4900FD3ECA /* MyTickets */,
+				5DA1286629D9DFFC00FE9847 /* Settings */,
 				5DCFEF8329D9D10700892066 /* SignUp */,
 				5DC41AE729D99B9C002FE668 /* UserDetails */,
 				5DD3692429D8DF2500356F4C /* SelectSeat */,
@@ -185,6 +195,40 @@
 				5DC41AD829D97BDD002FE668 /* SelectSeatCollectionViewCell.xib */,
 			);
 			path = SelectSeatView;
+			sourceTree = "<group>";
+		};
+		5D97BC9729D9FD4900FD3ECA /* MyTickets */ = {
+			isa = PBXGroup;
+			children = (
+				5D97BC9929D9FD6F00FD3ECA /* MyTicketsModel */,
+				5D97BC9829D9FD5F00FD3ECA /* MyTicketsView */,
+			);
+			path = MyTickets;
+			sourceTree = "<group>";
+		};
+		5D97BC9829D9FD5F00FD3ECA /* MyTicketsView */ = {
+			isa = PBXGroup;
+			children = (
+				5D97BC9A29D9FD7F00FD3ECA /* MyTicketsViewController.swift */,
+				5D97BC9C29DA02FF00FD3ECA /* MyTicketsTableViewCell.swift */,
+				5D97BC9D29DA02FF00FD3ECA /* MyTicketsTableViewCell.xib */,
+			);
+			path = MyTicketsView;
+			sourceTree = "<group>";
+		};
+		5D97BC9929D9FD6F00FD3ECA /* MyTicketsModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyTicketsModel;
+			sourceTree = "<group>";
+		};
+		5DA1286629D9DFFC00FE9847 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				5DA1286729D9E00A00FE9847 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		5DC41AE729D99B9C002FE668 /* UserDetails */ = {
@@ -309,7 +353,6 @@
 				648AC10F329CDF8C4F886E67 /* Pods-BusBus.debug.xcconfig */,
 				48F5E6752A0819B5C0A0FE55 /* Pods-BusBus.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -376,6 +419,7 @@
 				5DED7E6B29D84C6600B87543 /* LaunchScreen.storyboard in Resources */,
 				5DED7E6829D84C6600B87543 /* Assets.xcassets in Resources */,
 				5DED7E6629D84C6500B87543 /* Main.storyboard in Resources */,
+				5D97BC9F29DA02FF00FD3ECA /* MyTicketsTableViewCell.xib in Resources */,
 				5DC41ADA29D97BDD002FE668 /* SelectSeatCollectionViewCell.xib in Resources */,
 				5DC41AF229D99CF2002FE668 /* UserTableViewCell.xib in Resources */,
 				5DD3691E29D89FB500356F4C /* FindBusTableViewCell.xib in Resources */,
@@ -447,10 +491,13 @@
 				5DD3691A29D89E9F00356F4C /* FindBusViewController.swift in Sources */,
 				5DD3691229D885CB00356F4C /* DateModel.swift in Sources */,
 				5DD3691429D885F400356F4C /* PassengerModel.swift in Sources */,
+				5DA1286829D9E00A00FE9847 /* SettingsViewController.swift in Sources */,
 				5DED7E7829D84E2000B87543 /* OnboardingViewController.swift in Sources */,
 				5D022E9029D8502E004F92F7 /* UIView+Extension.swift in Sources */,
 				5DC41AF129D99CF2002FE668 /* UserTableViewCell.swift in Sources */,
 				5DED7E6129D84C6500B87543 /* SceneDelegate.swift in Sources */,
+				5D97BC9B29D9FD7F00FD3ECA /* MyTicketsViewController.swift in Sources */,
+				5D97BC9E29DA02FF00FD3ECA /* MyTicketsTableViewCell.swift in Sources */,
 				5D022E9729D8529E004F92F7 /* OnboardingCollectionViewCell.swift in Sources */,
 				5DC41AEE29D99BCF002FE668 /* UserModel.swift in Sources */,
 				5DC41AE929D99BB1002FE668 /* UserViewController.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
@@ -18,7 +19,18 @@ class SignUpViewController: UIViewController {
         
     }
     @IBAction func signUpButtonClicked(_ sender: Any) {
-        dismiss(animated: true)
+        if usernameTextField.text != "" && passwordTextField.text != "" {
+            Auth.auth().createUser(withEmail: usernameTextField.text!, password: passwordTextField.text!) { (authdata, error) in
+                if error != nil {
+                    UIAlertController.alertMessage(title: "Hata", message: error?.localizedDescription ?? "Hata", vc: self)
+                } else {
+                    self.dismiss(animated: true)
+                }
+            }
+        } else {
+            UIAlertController.alertMessage(title: "Hata", message: "Kullanıcı adı veya şifre girmedin", vc: self)
+        }
+        
     }
     
 }
