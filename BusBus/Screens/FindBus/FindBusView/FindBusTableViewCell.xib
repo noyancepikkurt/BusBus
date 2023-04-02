@@ -29,7 +29,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7s 30dk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjP-r5-OAj">
                                 <rect key="frame" x="59" y="38" width="66" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <color key="textColor" systemColor="systemGray5Color"/>
+                                <color key="textColor" systemColor="systemGray4Color"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300 TL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xKT-0V-5Tw">
@@ -51,7 +51,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İstanbul" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kcy-80-00C">
-                                <rect key="frame" x="113.66666666666667" y="88" width="62.333333333333329" height="17"/>
+                                <rect key="frame" x="111.66666666666667" y="88" width="62.333333333333329" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -92,11 +92,11 @@
                             <constraint firstItem="yjO-E1-A6R" firstAttribute="top" secondItem="m6m-gv-0ZB" secondAttribute="top" constant="36" id="etl-Pd-eaG"/>
                             <constraint firstItem="zsh-aL-MVd" firstAttribute="bottom" secondItem="m6m-gv-0ZB" secondAttribute="bottomMargin" id="hh4-3a-Ah8"/>
                             <constraint firstAttribute="trailing" secondItem="xKT-0V-5Tw" secondAttribute="trailing" constant="17" id="kDg-k4-XNv"/>
-                            <constraint firstAttribute="trailing" secondItem="Kcy-80-00C" secondAttribute="trailing" constant="12" id="nNe-ik-Ard"/>
+                            <constraint firstAttribute="trailing" secondItem="Kcy-80-00C" secondAttribute="trailing" constant="14" id="nNe-ik-Ard"/>
                             <constraint firstItem="zsh-aL-MVd" firstAttribute="baseline" secondItem="ISd-66-zJj" secondAttribute="baseline" id="ppa-su-RS0"/>
                             <constraint firstItem="yjO-E1-A6R" firstAttribute="leading" secondItem="m6m-gv-0ZB" secondAttribute="leading" constant="44" id="seD-dg-8Et"/>
                             <constraint firstItem="zsh-aL-MVd" firstAttribute="top" secondItem="o9F-Yf-UpS" secondAttribute="bottom" constant="64" id="sjy-eo-1xG"/>
-                            <constraint firstItem="Kcy-80-00C" firstAttribute="leading" secondItem="ISd-66-zJj" secondAttribute="trailing" constant="12" id="u6t-sb-9F5"/>
+                            <constraint firstItem="Kcy-80-00C" firstAttribute="leading" secondItem="ISd-66-zJj" secondAttribute="trailing" constant="10.000000000000028" id="u6t-sb-9F5"/>
                             <constraint firstItem="LjP-r5-OAj" firstAttribute="leading" secondItem="m6m-gv-0ZB" secondAttribute="leading" constant="59" id="vh2-XN-VxG"/>
                             <constraint firstItem="mBq-5o-mux" firstAttribute="centerX" secondItem="ISd-66-zJj" secondAttribute="centerX" id="z0O-Xa-ziX"/>
                         </constraints>
@@ -131,6 +131,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="boardingFromLabelCell" destination="zsh-aL-MVd" id="lFp-sV-Sqa"/>
                 <outlet property="dateLabelCell" destination="mBq-5o-mux" id="MfU-8X-Iag"/>
@@ -148,8 +149,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

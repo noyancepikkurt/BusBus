@@ -12,6 +12,15 @@
 		5D022E9729D8529E004F92F7 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D022E9629D8529E004F92F7 /* OnboardingCollectionViewCell.swift */; };
 		5D022E9B29D86469004F92F7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D022E9A29D86469004F92F7 /* LoginViewController.swift */; };
 		5D022EA029D8758B004F92F7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D022E9F29D8758B004F92F7 /* HomeViewController.swift */; };
+		5D38D83229D9743B004AE21C /* SelectSeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D38D83129D9743B004AE21C /* SelectSeatViewController.swift */; };
+		5DC41AD929D97BDD002FE668 /* SelectSeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC41AD729D97BDD002FE668 /* SelectSeatCollectionViewCell.swift */; };
+		5DC41ADA29D97BDD002FE668 /* SelectSeatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC41AD829D97BDD002FE668 /* SelectSeatCollectionViewCell.xib */; };
+		5DC41AE929D99BB1002FE668 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC41AE829D99BB1002FE668 /* UserViewController.swift */; };
+		5DC41AEE29D99BCF002FE668 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC41AED29D99BCF002FE668 /* UserModel.swift */; };
+		5DC41AF129D99CF2002FE668 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC41AEF29D99CF2002FE668 /* UserTableViewCell.swift */; };
+		5DC41AF229D99CF2002FE668 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC41AF029D99CF2002FE668 /* UserTableViewCell.xib */; };
+		5DCFEF8529D9D12300892066 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFEF8429D9D12300892066 /* SignUpViewController.swift */; };
+		5DCFEF8729D9D38F00892066 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DCFEF8629D9D38E00892066 /* GoogleService-Info.plist */; };
 		5DD3690E29D8859600356F4C /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3690D29D8859600356F4C /* TimeModel.swift */; };
 		5DD3691229D885CB00356F4C /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3691129D885CB00356F4C /* DateModel.swift */; };
 		5DD3691429D885F400356F4C /* PassengerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3691329D885F400356F4C /* PassengerModel.swift */; };
@@ -27,14 +36,26 @@
 		5DED7E6829D84C6600B87543 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DED7E6729D84C6600B87543 /* Assets.xcassets */; };
 		5DED7E6B29D84C6600B87543 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DED7E6929D84C6600B87543 /* LaunchScreen.storyboard */; };
 		5DED7E7829D84E2000B87543 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DED7E7729D84E2000B87543 /* OnboardingViewController.swift */; };
+		A4DD1A06809FBC2BDDF40DDB /* Pods_BusBus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5887AC30F4A67C1443673B1E /* Pods_BusBus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48F5E6752A0819B5C0A0FE55 /* Pods-BusBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusBus.release.xcconfig"; path = "Target Support Files/Pods-BusBus/Pods-BusBus.release.xcconfig"; sourceTree = "<group>"; };
+		5887AC30F4A67C1443673B1E /* Pods_BusBus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BusBus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D022E8F29D8502E004F92F7 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5D022E9129D850C1004F92F7 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		5D022E9629D8529E004F92F7 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		5D022E9A29D86469004F92F7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5D022E9F29D8758B004F92F7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5D38D83129D9743B004AE21C /* SelectSeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatViewController.swift; sourceTree = "<group>"; };
+		5DC41AD729D97BDD002FE668 /* SelectSeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatCollectionViewCell.swift; sourceTree = "<group>"; };
+		5DC41AD829D97BDD002FE668 /* SelectSeatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSeatCollectionViewCell.xib; sourceTree = "<group>"; };
+		5DC41AE829D99BB1002FE668 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		5DC41AED29D99BCF002FE668 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		5DC41AEF29D99CF2002FE668 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		5DC41AF029D99CF2002FE668 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		5DCFEF8429D9D12300892066 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5DCFEF8629D9D38E00892066 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DD3690D29D8859600356F4C /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		5DD3691129D885CB00356F4C /* DateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
 		5DD3691329D885F400356F4C /* PassengerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerModel.swift; sourceTree = "<group>"; };
@@ -52,6 +73,7 @@
 		5DED7E6A29D84C6600B87543 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5DED7E6C29D84C6600B87543 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DED7E7729D84E2000B87543 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		648AC10F329CDF8C4F886E67 /* Pods-BusBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BusBus.debug.xcconfig"; path = "Target Support Files/Pods-BusBus/Pods-BusBus.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +81,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4DD1A06809FBC2BDDF40DDB /* Pods_BusBus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		148F4E533399E55F4656421F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5887AC30F4A67C1443673B1E /* Pods_BusBus.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D022E8E29D85013004F92F7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +108,8 @@
 		5D022E9329D8510E004F92F7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				5DCFEF8329D9D10700892066 /* SignUp */,
+				5DC41AE729D99B9C002FE668 /* UserDetails */,
 				5DD3692429D8DF2500356F4C /* SelectSeat */,
 				5DD3691729D89E8800356F4C /* FindBus */,
 				5D022E9D29D87578004F92F7 /* Home */,
@@ -144,6 +177,51 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
+		5D38D83329D97442004AE21C /* SelectSeatView */ = {
+			isa = PBXGroup;
+			children = (
+				5D38D83129D9743B004AE21C /* SelectSeatViewController.swift */,
+				5DC41AD729D97BDD002FE668 /* SelectSeatCollectionViewCell.swift */,
+				5DC41AD829D97BDD002FE668 /* SelectSeatCollectionViewCell.xib */,
+			);
+			path = SelectSeatView;
+			sourceTree = "<group>";
+		};
+		5DC41AE729D99B9C002FE668 /* UserDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5DC41AEC29D99BC5002FE668 /* UserView */,
+				5DC41AEA29D99BB7002FE668 /* UserModel */,
+			);
+			path = UserDetails;
+			sourceTree = "<group>";
+		};
+		5DC41AEA29D99BB7002FE668 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DC41AED29D99BCF002FE668 /* UserModel.swift */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
+		5DC41AEC29D99BC5002FE668 /* UserView */ = {
+			isa = PBXGroup;
+			children = (
+				5DC41AE829D99BB1002FE668 /* UserViewController.swift */,
+				5DC41AEF29D99CF2002FE668 /* UserTableViewCell.swift */,
+				5DC41AF029D99CF2002FE668 /* UserTableViewCell.xib */,
+			);
+			path = UserView;
+			sourceTree = "<group>";
+		};
+		5DCFEF8329D9D10700892066 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5DCFEF8429D9D12300892066 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		5DD3691729D89E8800356F4C /* FindBus */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +252,7 @@
 		5DD3692429D8DF2500356F4C /* SelectSeat */ = {
 			isa = PBXGroup;
 			children = (
+				5D38D83329D97442004AE21C /* SelectSeatView */,
 			);
 			path = SelectSeat;
 			sourceTree = "<group>";
@@ -183,6 +262,8 @@
 			children = (
 				5DED7E5D29D84C6500B87543 /* BusBus */,
 				5DED7E5C29D84C6500B87543 /* Products */,
+				9A2183689A0E9CD918FF99D8 /* Pods */,
+				148F4E533399E55F4656421F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -204,6 +285,7 @@
 				5DED7E6729D84C6600B87543 /* Assets.xcassets */,
 				5DED7E6929D84C6600B87543 /* LaunchScreen.storyboard */,
 				5DED7E6C29D84C6600B87543 /* Info.plist */,
+				5DCFEF8629D9D38E00892066 /* GoogleService-Info.plist */,
 				5DD3691529D8862B00356F4C /* TicketModel.swift */,
 				5DD3690D29D8859600356F4C /* TimeModel.swift */,
 				5DD3691129D885CB00356F4C /* DateModel.swift */,
@@ -221,6 +303,16 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		9A2183689A0E9CD918FF99D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				648AC10F329CDF8C4F886E67 /* Pods-BusBus.debug.xcconfig */,
+				48F5E6752A0819B5C0A0FE55 /* Pods-BusBus.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,9 +320,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5DED7E6F29D84C6600B87543 /* Build configuration list for PBXNativeTarget "BusBus" */;
 			buildPhases = (
+				BFE924FF9E530596FF839647 /* [CP] Check Pods Manifest.lock */,
 				5DED7E5729D84C6500B87543 /* Sources */,
 				5DED7E5829D84C6500B87543 /* Frameworks */,
 				5DED7E5929D84C6500B87543 /* Resources */,
+				F1180829145DDDA367C664D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,33 +376,84 @@
 				5DED7E6B29D84C6600B87543 /* LaunchScreen.storyboard in Resources */,
 				5DED7E6829D84C6600B87543 /* Assets.xcassets in Resources */,
 				5DED7E6629D84C6500B87543 /* Main.storyboard in Resources */,
+				5DC41ADA29D97BDD002FE668 /* SelectSeatCollectionViewCell.xib in Resources */,
+				5DC41AF229D99CF2002FE668 /* UserTableViewCell.xib in Resources */,
 				5DD3691E29D89FB500356F4C /* FindBusTableViewCell.xib in Resources */,
+				5DCFEF8729D9D38F00892066 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BFE924FF9E530596FF839647 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BusBus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1180829145DDDA367C664D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusBus/Pods-BusBus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BusBus/Pods-BusBus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BusBus/Pods-BusBus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5DED7E5729D84C6500B87543 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DCFEF8529D9D12300892066 /* SignUpViewController.swift in Sources */,
 				5D022E9B29D86469004F92F7 /* LoginViewController.swift in Sources */,
 				5DD3691D29D89FB500356F4C /* FindBusTableViewCell.swift in Sources */,
 				5D022E9229D850C1004F92F7 /* OnboardingSlide.swift in Sources */,
 				5DED7E5F29D84C6500B87543 /* AppDelegate.swift in Sources */,
+				5D38D83229D9743B004AE21C /* SelectSeatViewController.swift in Sources */,
 				5DD3692329D8DACA00356F4C /* AlertExtension.swift in Sources */,
 				5D022EA029D8758B004F92F7 /* HomeViewController.swift in Sources */,
 				5DD3690E29D8859600356F4C /* TimeModel.swift in Sources */,
 				5DD3692129D8CB6100356F4C /* FindBusModel.swift in Sources */,
+				5DC41AD929D97BDD002FE668 /* SelectSeatCollectionViewCell.swift in Sources */,
 				5DD3691629D8862B00356F4C /* TicketModel.swift in Sources */,
 				5DD3691A29D89E9F00356F4C /* FindBusViewController.swift in Sources */,
 				5DD3691229D885CB00356F4C /* DateModel.swift in Sources */,
 				5DD3691429D885F400356F4C /* PassengerModel.swift in Sources */,
 				5DED7E7829D84E2000B87543 /* OnboardingViewController.swift in Sources */,
 				5D022E9029D8502E004F92F7 /* UIView+Extension.swift in Sources */,
+				5DC41AF129D99CF2002FE668 /* UserTableViewCell.swift in Sources */,
 				5DED7E6129D84C6500B87543 /* SceneDelegate.swift in Sources */,
 				5D022E9729D8529E004F92F7 /* OnboardingCollectionViewCell.swift in Sources */,
+				5DC41AEE29D99BCF002FE668 /* UserModel.swift in Sources */,
+				5DC41AE929D99BB1002FE668 /* UserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +595,7 @@
 		};
 		5DED7E7029D84C6600B87543 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 648AC10F329CDF8C4F886E67 /* Pods-BusBus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -478,6 +624,7 @@
 		};
 		5DED7E7129D84C6600B87543 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48F5E6752A0819B5C0A0FE55 /* Pods-BusBus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

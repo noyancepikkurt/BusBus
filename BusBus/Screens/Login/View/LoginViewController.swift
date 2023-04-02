@@ -15,19 +15,24 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
     
     
     @IBAction func loginButtonAction(_ sender: Any) {
         //Uygulama ikinci kez açılırsa tekrar onboarding ekranı gözükmemesi için
-        let defaults = UserDefaults.standard
-        if defaults.object(forKey: "FirstTime") == nil {
-            defaults.set("No",forKey: "FirstTime")
-            performSegue(withIdentifier: "toOnboardingVC", sender: nil)
-        } else {
-            performSegue(withIdentifier: "toHomeVC", sender: nil)
-        }
+//        let defaults = UserDefaults.standard
+//        if defaults.object(forKey: "FirstTime") == nil {
+//            defaults.set("No",forKey: "FirstTime")
+//            performSegue(withIdentifier: "toOnboardingVC", sender: nil)
+//        } else {
+//            performSegue(withIdentifier: "toHomeVC", sender: nil)
+//        }
+        performSegue(withIdentifier: "toOnboardingVC", sender: nil)
+    }
+    
+    
+    @IBAction func signUpButtonAction(_ sender: Any) {
+        performSegue(withIdentifier: "toSignUpVC", sender: nil)
     }
     
     

@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     var destinationPickerView = UIPickerView()
     var cities = [String]()
     let toolBar = UIToolbar()
-    
+    let time = [8,10,9,7,11,10]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,12 +42,12 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toFindBusVC" {
             let destination = segue.destination as? FindBusViewController
-            destination?.findBusCellArray = [FindBusModel(imageView: UIImage(named: "kamil_koc")!, timeLabel: "00:00", timeLeftLabel: "8s 30dk", priceLabel: "400 TL", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
-                                             FindBusModel(imageView: UIImage(named: "ben_turizm")!, timeLabel: "00:30", timeLeftLabel: "7s 30dk", priceLabel: "300 TL", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
-                                             FindBusModel(imageView: UIImage(named: "izmir_turizm")!, timeLabel: "01:00", timeLeftLabel: "8s", priceLabel: "300 TL", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
-                                             FindBusModel(imageView: UIImage(named: "metro")!, timeLabel: "02:00", timeLeftLabel: "9s 30dk", priceLabel: "350 TL", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
-                                             FindBusModel(imageView: UIImage(named: "pamukkale")!, timeLabel: "02:30", timeLeftLabel: "7s 30dk", priceLabel: "400 TL", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
-                                             FindBusModel(imageView: UIImage(named: "varan")!, timeLabel: "03:00", timeLeftLabel: "8s 30dk", priceLabel: "300 TL", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text)]
+            destination?.findBusCellArray = [FindBusModel(imageView: UIImage(named: "kamil_koc")!, timeLabel: "00:00", timeLeftLabel: "\(time[0])s 30dk", priceLabel: "400 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
+                                             FindBusModel(imageView: UIImage(named: "ben_turizm")!, timeLabel: "00:30", timeLeftLabel: "\(time[1])s", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
+                                             FindBusModel(imageView: UIImage(named: "izmir_turizm")!, timeLabel: "01:00", timeLeftLabel: "\(time[2])s 45dk", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
+                                             FindBusModel(imageView: UIImage(named: "metro")!, timeLabel: "02:00", timeLeftLabel: "\(time[3])s", priceLabel: "350 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
+                                             FindBusModel(imageView: UIImage(named: "pamukkale")!, timeLabel: "02:30", timeLeftLabel: "\(time[4])s 30dk", priceLabel: "400 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),
+                                             FindBusModel(imageView: UIImage(named: "varan")!, timeLabel: "03:00", timeLeftLabel: "\(time[5])s", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text)]
             destination?.boarding = boardingFromTextField.text!
             destination?.destination = destinationTextField.text!
             destination?.date = dateTextField.text!

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableViewCell" rowHeight="-152" id="KGk-i7-Jjw" customClass="UserTableViewCell" customModule="BusBus" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="196"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="196"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yG5-Nm-xk9">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="196"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ad Soyad " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5c-x4-y9A">
+                                <rect key="frame" x="17" y="67" width="311" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yolcu 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTO-I7-qx8">
+                                <rect key="frame" x="17" y="22" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yaş" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VMj-ag-6ha">
+                                <rect key="frame" x="17" y="126" width="118" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="zzs-Cw-bZ3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VMj-ag-6ha" firstAttribute="leading" secondItem="C5c-x4-y9A" secondAttribute="leading" id="77P-cZ-8ak"/>
+                            <constraint firstItem="C5c-x4-y9A" firstAttribute="top" secondItem="XTO-I7-qx8" secondAttribute="bottom" constant="24" id="DgA-w9-aHp"/>
+                            <constraint firstItem="C5c-x4-y9A" firstAttribute="top" secondItem="yG5-Nm-xk9" secondAttribute="top" constant="67" id="KtA-8f-jfR"/>
+                            <constraint firstAttribute="trailing" secondItem="C5c-x4-y9A" secondAttribute="trailing" constant="33" id="NDV-fT-4cU"/>
+                            <constraint firstItem="C5c-x4-y9A" firstAttribute="leading" secondItem="yG5-Nm-xk9" secondAttribute="leading" constant="17" id="iUQ-QC-d9O"/>
+                            <constraint firstItem="VMj-ag-6ha" firstAttribute="top" secondItem="C5c-x4-y9A" secondAttribute="bottom" constant="25" id="q1U-aC-LGl"/>
+                            <constraint firstItem="XTO-I7-qx8" firstAttribute="leading" secondItem="C5c-x4-y9A" secondAttribute="leading" id="ydt-Nh-3yE"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="yG5-Nm-xk9" secondAttribute="trailing" id="PJa-d3-9rr"/>
+                    <constraint firstAttribute="bottom" secondItem="yG5-Nm-xk9" secondAttribute="bottom" id="bgW-wH-qnR"/>
+                    <constraint firstItem="yG5-Nm-xk9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lUg-PZ-tCr"/>
+                    <constraint firstItem="yG5-Nm-xk9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tAQ-J7-2kU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="ageTextField" destination="VMj-ag-6ha" id="Wvu-zy-uIi"/>
+                <outlet property="nameTextField" destination="C5c-x4-y9A" id="09I-ns-6KS"/>
+                <outlet property="passengerLabel" destination="XTO-I7-qx8" id="Ge7-q8-SKR"/>
+            </connections>
+            <point key="canvasLocation" x="77.099236641221367" y="-15.492957746478874"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
