@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="svg-wA-gWt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3ma-8o-CHK">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -132,28 +132,19 @@
         <!--Biletlerim-->
         <scene sceneID="gxm-u3-9mH">
             <objects>
-                <viewController id="Oix-5i-b5g" customClass="MyTicketsViewController" customModule="BusBus" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myTickets" id="Oix-5i-b5g" customClass="MyTicketsViewController" customModule="BusBus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mS1-lK-BmP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-jK-pYW">
-                                <rect key="frame" x="16" y="37" width="361" height="755"/>
+                                <rect key="frame" x="16" y="37" width="361" height="794"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biletlerim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKJ-7H-2uJ">
-                                        <rect key="frame" x="8" y="8" width="105" height="145"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="105" id="5vB-aE-hem"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vqJ-PG-oVo">
-                                        <rect key="frame" x="8" y="148" width="345" height="607"/>
+                                        <rect key="frame" x="8" y="26" width="345" height="548"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="607" id="6lJ-Db-cf6"/>
+                                            <constraint firstAttribute="height" constant="548" id="OX8-Jj-KfL"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -168,12 +159,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="vqJ-PG-oVo" firstAttribute="leading" secondItem="Sn1-jK-pYW" secondAttribute="leading" constant="8" id="3c6-fj-WEw"/>
-                                    <constraint firstItem="lKJ-7H-2uJ" firstAttribute="top" secondItem="Sn1-jK-pYW" secondAttribute="topMargin" id="LhN-hh-Aaf"/>
-                                    <constraint firstItem="vqJ-PG-oVo" firstAttribute="bottom" secondItem="Sn1-jK-pYW" secondAttribute="bottomMargin" constant="8" id="Tdf-oN-gjy"/>
-                                    <constraint firstItem="vqJ-PG-oVo" firstAttribute="top" secondItem="lKJ-7H-2uJ" secondAttribute="bottom" constant="-5" id="U5P-DB-EY0"/>
-                                    <constraint firstItem="vqJ-PG-oVo" firstAttribute="centerX" secondItem="Sn1-jK-pYW" secondAttribute="centerX" id="bV7-4t-bDj"/>
-                                    <constraint firstItem="lKJ-7H-2uJ" firstAttribute="leading" secondItem="Sn1-jK-pYW" secondAttribute="leadingMargin" id="he0-uH-EHA"/>
+                                    <constraint firstItem="vqJ-PG-oVo" firstAttribute="leading" secondItem="Sn1-jK-pYW" secondAttribute="leadingMargin" id="Qfq-sP-9q3"/>
+                                    <constraint firstItem="vqJ-PG-oVo" firstAttribute="trailing" secondItem="Sn1-jK-pYW" secondAttribute="trailingMargin" id="VB0-mK-bjZ"/>
+                                    <constraint firstItem="vqJ-PG-oVo" firstAttribute="top" secondItem="Sn1-jK-pYW" secondAttribute="top" constant="26" id="XgJ-Bk-3kg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -181,17 +169,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biletlerim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKJ-7H-2uJ">
+                                <rect key="frame" x="16" y="-5" width="105" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="vaR-6B-j0D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e01-2B-TyS"/>
                         <color key="backgroundColor" red="0.87058823529411766" green="0.87058823529411766" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Sn1-jK-pYW" firstAttribute="top" secondItem="e01-2B-TyS" secondAttribute="top" constant="37" id="00a-q2-XFq"/>
-                            <constraint firstItem="Sn1-jK-pYW" firstAttribute="leading" secondItem="mS1-lK-BmP" secondAttribute="leadingMargin" id="QOW-6x-dcb"/>
-                            <constraint firstItem="e01-2B-TyS" firstAttribute="bottom" secondItem="Sn1-jK-pYW" secondAttribute="bottom" constant="11" id="dcd-TK-YPf"/>
-                            <constraint firstItem="Sn1-jK-pYW" firstAttribute="trailing" secondItem="mS1-lK-BmP" secondAttribute="trailingMargin" id="fVT-0Y-1CK"/>
+                            <constraint firstItem="e01-2B-TyS" firstAttribute="trailing" secondItem="lKJ-7H-2uJ" secondAttribute="trailing" constant="272" id="amh-U3-9Aq"/>
+                            <constraint firstItem="e01-2B-TyS" firstAttribute="bottom" secondItem="Sn1-jK-pYW" secondAttribute="bottom" constant="11" id="bCu-7E-S5G"/>
+                            <constraint firstItem="lKJ-7H-2uJ" firstAttribute="top" secondItem="mS1-lK-BmP" secondAttribute="topMargin" constant="-5" id="fdi-vG-m1L"/>
+                            <constraint firstItem="Sn1-jK-pYW" firstAttribute="trailing" secondItem="mS1-lK-BmP" secondAttribute="trailingMargin" id="mee-Ro-UQU"/>
+                            <constraint firstItem="lKJ-7H-2uJ" firstAttribute="leading" secondItem="Sn1-jK-pYW" secondAttribute="leading" id="rU3-sn-nKB"/>
+                            <constraint firstItem="Sn1-jK-pYW" firstAttribute="top" secondItem="lKJ-7H-2uJ" secondAttribute="bottom" constant="8" id="sAW-aM-fHv"/>
+                            <constraint firstItem="lKJ-7H-2uJ" firstAttribute="leading" secondItem="mS1-lK-BmP" secondAttribute="leadingMargin" id="t4G-2c-Ll0"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Biletlerim" image="ticket_icon" id="ooY-fJ-PLj"/>
+                    <navigationItem key="navigationItem" id="ueI-ge-Rdl"/>
                     <connections>
                         <outlet property="tableView" destination="vqJ-PG-oVo" id="ELy-Gs-APy"/>
                     </connections>
@@ -613,7 +614,7 @@
                                             <constraint firstAttribute="width" constant="87.666666666666686" id="H2F-k1-b7t"/>
                                             <constraint firstAttribute="height" constant="40" id="gZM-CZ-lpj"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -622,7 +623,7 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gidilen yer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mx0-2V-oGm">
                                         <rect key="frame" x="236.33333333333334" y="43" width="84.666666666666657" height="40"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -632,7 +633,7 @@
                                             <constraint firstAttribute="width" constant="112" id="Pvo-q3-dhy"/>
                                             <constraint firstAttribute="height" constant="21" id="uEt-e1-nqg"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1050,6 +1051,9 @@
                         <outlet property="phoneNumberTextField" destination="omV-bm-HVK" id="EAw-PB-GdR"/>
                         <outlet property="tableView" destination="mqO-Cu-yRN" id="zCi-Wk-WxL"/>
                         <outlet property="totalPriceLabel" destination="cHq-cC-1uf" id="TDr-7h-CP6"/>
+                        <segue destination="Oix-5i-b5g" kind="popover" identifier="toMyTicketsVC" id="eWR-Xr-I0U">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ie2-u4-JbC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1115,7 +1119,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BusBus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdW-sm-0IU">
-                                <rect key="frame" x="39" y="24" width="315" height="40.666666666666657"/>
+                                <rect key="frame" x="39" y="23.999999999999996" width="315" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1376,6 +1380,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="cJy-9n-Ans"/>
+        <segue reference="eWR-Xr-I0U"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="a1" width="18.666666030883789" height="18"/>

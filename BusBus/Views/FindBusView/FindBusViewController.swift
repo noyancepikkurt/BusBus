@@ -7,11 +7,11 @@
 
 import UIKit
 
-class FindBusViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var boardingLabel: UILabel!
-    @IBOutlet weak var destinationLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
+final class FindBusViewController: UIViewController {
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var boardingLabel: UILabel!
+    @IBOutlet private weak var destinationLabel: UILabel!
+    @IBOutlet private weak var dateLabel: UILabel!
     var findBusCellArray = [FindBusModel]()
     var boarding = String()
     var destination = String()

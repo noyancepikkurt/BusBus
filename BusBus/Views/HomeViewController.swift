@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var boardingFromTextField: UITextField!
     @IBOutlet weak var destinationTextField: UITextField!
@@ -31,14 +31,13 @@ class HomeViewController: UIViewController {
         toolBarConfig()
     }
     @IBAction func findBusButtonAction(_ sender: Any) {
-//        if boardingFromTextField.text == "" || destinationTextField.text == "" {
-//            UIAlertController.alertMessage(title: "Hata", message: "Binilen veya gidilecek yer girilmedi", vc: self)
-//        } else if dateTextField.text == "" {
-//            UIAlertController.alertMessage(title: "Hata", message: "Tarih Girilmedi", vc: self)
-//        } else {
-//            performSegue(withIdentifier: "toFindBusVC", sender: nil)
-//        }
-        performSegue(withIdentifier: "toFindBusVC", sender: nil)
+        if boardingFromTextField.text == "" || destinationTextField.text == "" {
+            UIAlertController.alertMessage(title: "Hata", message: "Binilen veya gidilecek yer girilmedi", vc: self)
+        } else if dateTextField.text == "" {
+            UIAlertController.alertMessage(title: "Hata", message: "Tarih Girilmedi", vc: self)
+        } else {
+            performSegue(withIdentifier: "toFindBusVC", sender: nil)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -79,15 +78,14 @@ class HomeViewController: UIViewController {
         destinationTextField.inputView = destinationPickerView
     }
     
-    
-    func pickerViewConfig() {
+    private func pickerViewConfig() {
         boardingPickerView.delegate = self
         boardingPickerView.dataSource = self
         destinationPickerView.delegate = self
         destinationPickerView.dataSource = self
     }
     
-    func toolBarConfig() {
+    private func toolBarConfig() {
         toolBar.tintColor = .red
         toolBar.sizeToFit()
         let cancelButton = UIBarButtonItem(title: "İptal", style: .plain, target: self, action: #selector(cancelButtonAction))
@@ -101,7 +99,6 @@ class HomeViewController: UIViewController {
     
     @objc func okButtonAction() {
         view.endEditing(true)
-        
     }
     
     @objc func cancelButtonAction() {

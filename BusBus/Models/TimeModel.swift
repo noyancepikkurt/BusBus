@@ -8,6 +8,5 @@
 import Foundation
 
 struct TimeModel {
-    let hour: Int
-    let minute: Int
+    let time: String
 }

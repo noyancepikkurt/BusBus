@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SelectSeatCollectionViewCell: UICollectionViewCell {
+final class SelectSeatCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var viewForSelection: UIView!
     @IBOutlet weak var seatLabel: UILabel!
     

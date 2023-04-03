@@ -11,5 +11,4 @@ struct PassengerModel {
     let name: String
     let age: String
     // let id: Int
-    
 }

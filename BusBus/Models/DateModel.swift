@@ -8,7 +8,5 @@
 import Foundation
 
 struct DateModel {
-    let day: Int
-    let month: Int
-    let year: Int
+    let date: String
 }

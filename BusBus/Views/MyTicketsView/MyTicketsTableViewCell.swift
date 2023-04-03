@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MyTicketsTableViewCell: UITableViewCell {
+final class MyTicketsTableViewCell: UITableViewCell {
     @IBOutlet weak var boardingLabel: UILabel!
     @IBOutlet weak var destinationLabel: UILabel!
     @IBOutlet weak var passengerNameLabel: UILabel!
@@ -15,8 +15,14 @@ class MyTicketsTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var ticketTimeLabel: UILabel!
     
+    
     func setup(_ ticketModel: TicketModel) {
-        ticketModel.passenger
+        seatNumberLabel.text = ticketModel.seatNumber
+        dateLabel.text = ticketModel.Date.date
+        ticketTimeLabel.text = ticketModel.Time.time
+        boardingLabel.text = ticketModel.boarding
+        destinationLabel.text = ticketModel.destination
+        passengerNameLabel.text = ticketModel.passenger.name
     }
     
 }

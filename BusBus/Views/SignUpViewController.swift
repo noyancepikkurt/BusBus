@@ -8,16 +8,19 @@
 import UIKit
 import FirebaseAuth
 
-class SignUpViewController: UIViewController {
-
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+final class SignUpViewController: UIViewController {
+    @IBOutlet private weak var usernameTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        let gestureRegoznizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRegoznizer)
     }
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
+    
     @IBAction func signUpButtonClicked(_ sender: Any) {
         if usernameTextField.text != "" && passwordTextField.text != "" {
             Auth.auth().createUser(withEmail: usernameTextField.text!, password: passwordTextField.text!) { (authdata, error) in
@@ -30,7 +33,5 @@ class SignUpViewController: UIViewController {
         } else {
             UIAlertController.alertMessage(title: "Hata", message: "Kullanıcı adı veya şifre girmedin", vc: self)
         }
-        
     }
-    
 }

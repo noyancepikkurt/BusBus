@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FindBusTableViewCell: UITableViewCell {
+final class FindBusTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageViewCell: UIImageView!
     @IBOutlet weak var timeLabelCell: UILabel!

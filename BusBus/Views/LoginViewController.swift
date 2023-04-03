@@ -8,19 +8,20 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
-    
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+final class LoginViewController: UIViewController {
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let gestureRegoznizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRegoznizer)
+    }
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
     
-    
     @IBAction func loginButtonAction(_ sender: Any) {
-        
         if emailTextField.text != "" && passwordTextField.text != "" {
             Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (authdata, error) in
                 if error != nil {
@@ -40,13 +41,13 @@ class LoginViewController: UIViewController {
         }
         
         //Uygulama ikinci kez açılırsa tekrar onboarding ekranı gözükmemesi için
-//        let defaults = UserDefaults.standard
-//        if defaults.object(forKey: "FirstTime") == nil {
-//            defaults.set("No",forKey: "FirstTime")
-//            performSegue(withIdentifier: "toOnboardingVC", sender: nil)
-//        } else {
-//            performSegue(withIdentifier: "toHomeVC", sender: nil)
-//        }
+        //        let defaults = UserDefaults.standard
+        //        if defaults.object(forKey: "FirstTime") == nil {
+        //            defaults.set("No",forKey: "FirstTime")
+        //            performSegue(withIdentifier: "toOnboardingVC", sender: nil)
+        //        } else {
+        //            performSegue(withIdentifier: "toHomeVC", sender: nil)
+        //        }
     }
     
     @IBAction func signUpButtonAction(_ sender: Any) {
@@ -56,5 +57,4 @@ class LoginViewController: UIViewController {
     @IBAction func LoginAsGuestButtonAction(_ sender: Any) {
         performSegue(withIdentifier: "toOnboardingVC", sender: nil)
     }
-    
 }
