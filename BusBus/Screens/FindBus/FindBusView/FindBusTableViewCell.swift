@@ -21,7 +21,7 @@ class FindBusTableViewCell: UITableViewCell {
         imageViewCell.image = ticketModel.imageView
         timeLabelCell.text = ticketModel.timeLabel
         timeLeftLabelCell.text = ticketModel.timeLeftLabel
-        priceLabelCell.text = ticketModel.priceLabel
+        priceLabelCell.text = "\(ticketModel.priceLabel ?? 0) ₺"
         dateLabelCell.text = ticketModel.dateLabel
         boardingFromLabelCell.text = ticketModel.boardingFromLabel
         destinationLabelCell.text = ticketModel.destinationLabel

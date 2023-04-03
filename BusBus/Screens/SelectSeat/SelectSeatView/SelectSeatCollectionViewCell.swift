@@ -13,10 +13,9 @@ class SelectSeatCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
       super.awakeFromNib()
-            
+    
       let view = UIView(frame: bounds)
       self.backgroundView = view
-            
       let coloredView = UIView(frame: bounds)
       coloredView.backgroundColor = UIColor.red
       self.selectedBackgroundView = coloredView

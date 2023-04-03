@@ -26,15 +26,18 @@ class LoginViewController: UIViewController {
                 if error != nil {
                     UIAlertController.alertMessage(title: "Hata", message: error?.localizedDescription ?? "Hata", vc: self)
                 } else {
-                    self.performSegue(withIdentifier: "toOnboardingVC", sender: nil)
+                    let defaults = UserDefaults.standard
+                    if defaults.object(forKey: "FirstTime") == nil {
+                        defaults.set("No",forKey: "FirstTime")
+                        self.performSegue(withIdentifier: "toOnboardingVC", sender: nil)
+                    } else {
+                        self.performSegue(withIdentifier: "toHomeVC", sender: nil)
+                    }
                 }
             }
         } else {
             UIAlertController.alertMessage(title: "Hata", message: "Kullanıcı adı veya şifre girilmedi", vc: self)
         }
-        
-        
-        
         
         //Uygulama ikinci kez açılırsa tekrar onboarding ekranı gözükmemesi için
 //        let defaults = UserDefaults.standard
@@ -44,9 +47,7 @@ class LoginViewController: UIViewController {
 //        } else {
 //            performSegue(withIdentifier: "toHomeVC", sender: nil)
 //        }
-        
     }
-    
     
     @IBAction func signUpButtonAction(_ sender: Any) {
         performSegue(withIdentifier: "toSignUpVC", sender: nil)

@@ -11,7 +11,7 @@ struct FindBusModel {
     let imageView: UIImage?
     let timeLabel: String?
     let timeLeftLabel: String?
-    let priceLabel: String?
+    let priceLabel: Int!
     let dateLabel: String?
     let boardingFromLabel: String?
     let destinationLabel: String?

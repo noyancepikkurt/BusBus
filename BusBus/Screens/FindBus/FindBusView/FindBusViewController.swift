@@ -18,7 +18,7 @@ class FindBusViewController: UIViewController {
     var date = String()
     var startedTime = String()
     var finishedTime = ["08:30","10:30","10:45","09:00","14:00","13:00"]
-    var price = String()
+    var price = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +41,12 @@ extension FindBusViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FindBusCell", for: indexPath) as! FindBusTableViewCell
         cell.setup(findBusCellArray[indexPath.row])
-        startedTime = findBusCellArray[indexPath.row].timeLabel!
-        price = findBusCellArray[indexPath.row].priceLabel!
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        startedTime = findBusCellArray[indexPath.row].timeLabel!
+        price = findBusCellArray[indexPath.row].priceLabel!
         performSegue(withIdentifier: "toSelectSeatVC", sender: nil)
     }
     
@@ -57,8 +57,8 @@ extension FindBusViewController: UITableViewDelegate, UITableViewDataSource {
             destination?.destinationLbl = self.destination
             destination?.dateLbl = self.date
             destination?.destinationLbl = self.destination
-            destination?.timeStartedLbl = startedTime
-            destination?.priceLbl = price
+            destination?.timeStartedLbl = self.startedTime
+            destination?.price = self.price
         }
     }
 }

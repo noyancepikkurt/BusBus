@@ -11,6 +11,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var boardingFromTextField: UITextField!
     @IBOutlet weak var destinationTextField: UITextField!
+    @IBOutlet weak var heyLabel: UILabel!
+    
     var datePicker: UIDatePicker?
     var boardingPickerView = UIPickerView()
     var destinationPickerView = UIPickerView()
@@ -19,6 +21,7 @@ class HomeViewController: UIViewController {
     let time = [8,10,9,7,11,10]
     var findBusModel = [FindBusModel]()
     var dateFormatter = DateFormatter()
+    var price = [400,350,300,350,400,300]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +29,6 @@ class HomeViewController: UIViewController {
         citiesConfig()
         pickerViewConfig()
         toolBarConfig()
-        
     }
     @IBAction func findBusButtonAction(_ sender: Any) {
 //        if boardingFromTextField.text == "" || destinationTextField.text == "" {
@@ -42,7 +44,7 @@ class HomeViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toFindBusVC" {
             let destination = segue.destination as? FindBusViewController
-            destination?.findBusCellArray = [FindBusModel(imageView: UIImage(named: "kamil_koc")!, timeLabel: "00:00", timeLeftLabel: "\(time[0])s 30dk", priceLabel: "400 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "ben_turizm")!, timeLabel: "00:30", timeLeftLabel: "\(time[1])s", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),  FindBusModel(imageView: UIImage(named: "izmir_turizm")!, timeLabel: "01:00", timeLeftLabel: "\(time[2])s 45dk", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "metro")!, timeLabel: "02:00", timeLeftLabel: "\(time[3])s", priceLabel: "350 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "pamukkale")!, timeLabel: "02:30", timeLeftLabel: "\(time[4])s 30dk", priceLabel: "400 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "varan")!, timeLabel: "03:00", timeLeftLabel: "\(time[5])s", priceLabel: "300 ₺", dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text)]
+            destination?.findBusCellArray = [FindBusModel(imageView: UIImage(named: "kamil_koc")!, timeLabel: "00:00", timeLeftLabel: "\(time[0])s 30dk", priceLabel: (price[0]), dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "ben_turizm")!, timeLabel: "00:30", timeLeftLabel: "\(time[1])s", priceLabel: (price[1]), dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text),  FindBusModel(imageView: UIImage(named: "izmir_turizm")!, timeLabel: "01:00", timeLeftLabel: "\(time[2])s 45dk", priceLabel: (price[2]), dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "metro")!, timeLabel: "02:00", timeLeftLabel: "\(time[3])s", priceLabel: (price[3]), dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "pamukkale")!, timeLabel: "02:30", timeLeftLabel: "\(time[4])s 30dk", priceLabel: (price[4]), dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text), FindBusModel(imageView: UIImage(named: "varan")!, timeLabel: "03:00", timeLeftLabel: "\(time[5])s", priceLabel: (price[5]), dateLabel:dateTextField.text, boardingFromLabel: boardingFromTextField.text, destinationLabel: destinationTextField.text)]
             destination?.boarding = boardingFromTextField.text!
             destination?.destination = destinationTextField.text!
             destination?.date = dateTextField.text!

@@ -19,11 +19,10 @@ class SelectSeatViewController: UIViewController {
     var destinationLbl = ""
     var dateLbl = ""
     var timeStartedLbl = ""
-    var priceLbl = ""
+    var price = Int()
     
-    private var koltukNo = ["A1","B1","C1","D1","A2","B2","C2","D2","A3","B3","C3","D3","A4","B4","C4","D4",
-                            "A5","B5","C5","D5","A6","B6","C6","D6","A7","B7","C7","D7","A8","B8","C8","D8",
-                            "A9","B9","C9","D9","A10","B10","C10","D10","A11","B11","C11","D11","A12"]
+    private var koltukNo = ["A1","B1","","C1","D1","A2","B2","","C2","D2","A3","B3","","C3","D3","A4","B4","","C4","D4",
+                            "A5","B5","","C5","D5","A6","B6","","C6","D6","A7","B7","","C7","D7","A8","B8","","C8","D8","A9","B9","","C9","D9","A10","B10","","C10","D10","A11","B11","","C11","D11","A12"]
     var selectedKoltuk = [String]()
     private var selectedSeatIndex = [Int]()
     
@@ -31,13 +30,18 @@ class SelectSeatViewController: UIViewController {
         super.viewDidLoad()
         registerCollectionViewCell()
         collectionViewConfig()
+        labelsConfig()
+        
+        navigationController?.isNavigationBarHidden = false
+    }
+    
+    private func labelsConfig() {
         boardingLabel.text = boardingLbl
         destinationLabel.text = destinationLbl
         destinationTicketLabel.text = destinationLbl
         dateLabel.text = dateLbl
         timeStartedLabel.text = timeStartedLbl
-        priceLabel.text = priceLbl
-        
+        priceLabel.text = "\(price) ₺"
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
@@ -54,6 +58,7 @@ class SelectSeatViewController: UIViewController {
         if segue.identifier == "toUserVC" {
             let destination = segue.destination as! UserViewController
             destination.buyingSeatArray = selectedKoltuk
+            destination.totalPrice = selectedKoltuk.count * price
         }
     }
     private func registerCollectionViewCell() {
@@ -66,7 +71,7 @@ class SelectSeatViewController: UIViewController {
         design.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         design.minimumInteritemSpacing = 0
         design.minimumLineSpacing = 10
-        let cellWidth = (width - 60) / 4
+        let cellWidth = (width - 60) / 5
         design.itemSize = CGSize(width: cellWidth, height: cellWidth)
         collectionView.collectionViewLayout = design
     }
@@ -79,16 +84,19 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! SelectSeatCollectionViewCell
+        
         cell.seatLabel.text = koltukNo[indexPath.item]
+        
         if selectedSeatIndex.contains(indexPath.item) {
             cell.viewForSelection.backgroundColor = UIColor.red
-        } else {
-            cell.viewForSelection.backgroundColor = UIColor.gray
+        } else if koltukNo[indexPath.item] == "" {
+            cell.viewForSelection.backgroundColor = UIColor.white
+        }else {
+            cell.viewForSelection.backgroundColor = UIColor.systemGray2
         }
-        cell.layoutIfNeeded()
         cell.cornerRadius = 8
-        return cell
         
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
