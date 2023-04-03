@@ -8,7 +8,7 @@
 import UIKit
 
 final class MyTicketsViewController: UIViewController {
-   @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     var selectedBuyingSeats = [String]()
     var boardingCity = String()
@@ -17,18 +17,16 @@ final class MyTicketsViewController: UIViewController {
     var ticketTimeStarted = String()
     var passengerNames = [String]()
     var passengerAges = [Int]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewRegister()
         navigationController?.navigationBar.isHidden = true
-        tabBarController?.selectedIndex = 1
     }
     
     private func tableViewRegister() {
         tableView.register(UINib(nibName: "MyTicketsTableViewCell", bundle: nil), forCellReuseIdentifier: "MyTicketsCell")
     }
-    
 }
 
 extension MyTicketsViewController: UITableViewDelegate, UITableViewDataSource {

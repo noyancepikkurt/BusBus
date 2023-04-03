@@ -8,14 +8,13 @@
 import UIKit
 
 final class FindBusTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var imageViewCell: UIImageView!
-    @IBOutlet weak var timeLabelCell: UILabel!
-    @IBOutlet weak var timeLeftLabelCell: UILabel!
-    @IBOutlet weak var priceLabelCell: UILabel!
-    @IBOutlet weak var dateLabelCell: UILabel!
-    @IBOutlet weak var boardingFromLabelCell: UILabel!
-    @IBOutlet weak var destinationLabelCell: UILabel!
+    @IBOutlet private weak var imageViewCell: UIImageView!
+    @IBOutlet private weak var timeLabelCell: UILabel!
+    @IBOutlet private weak var timeLeftLabelCell: UILabel!
+    @IBOutlet private weak var priceLabelCell: UILabel!
+    @IBOutlet private weak var dateLabelCell: UILabel!
+    @IBOutlet private weak var boardingFromLabelCell: UILabel!
+    @IBOutlet private weak var destinationLabelCell: UILabel!
     
     func setup(_ ticketModel: FindBusModel) {
         imageViewCell.image = ticketModel.imageView

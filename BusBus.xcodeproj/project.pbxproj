@@ -219,10 +219,10 @@
 		5DED7E5D29D84C6500B87543 /* BusBus */ = {
 			isa = PBXGroup;
 			children = (
-				5D5A316729DB65BA006E9442 /* Models */,
-				5D5A316629DB65B2006E9442 /* Views */,
 				5D022E9C29D866E0004F92F7 /* Core */,
 				5D022E8E29D85013004F92F7 /* Extensions */,
+				5D5A316729DB65BA006E9442 /* Models */,
+				5D5A316629DB65B2006E9442 /* Views */,
 				5DED7E6429D84C6500B87543 /* Main.storyboard */,
 				5DED7E6729D84C6600B87543 /* Assets.xcassets */,
 				5DED7E6929D84C6600B87543 /* LaunchScreen.storyboard */,

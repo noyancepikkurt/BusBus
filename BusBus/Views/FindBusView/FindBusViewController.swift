@@ -16,9 +16,9 @@ final class FindBusViewController: UIViewController {
     var boarding = String()
     var destination = String()
     var date = String()
-    var startedTime = String()
-    var finishedTime = ["08:30","10:30","10:45","09:00","14:00","13:00"]
-    var price = Int()
+    private var startedTime = String()
+    private var finishedTime = ["08:30","10:30","10:45","09:00","14:00","13:00"]
+    private var price = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()

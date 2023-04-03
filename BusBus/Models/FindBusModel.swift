@@ -15,6 +15,5 @@ struct FindBusModel {
     let dateLabel: String?
     let boardingFromLabel: String?
     let destinationLabel: String?
-    
 }
 

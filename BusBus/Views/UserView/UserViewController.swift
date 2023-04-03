@@ -9,11 +9,11 @@ import UIKit
 
 
 final class UserViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var phoneNumberTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var totalPriceLabel: UILabel!
-    @IBOutlet weak var buyingSeatLabel: UILabel!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var phoneNumberTextField: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField!
+    @IBOutlet private weak var totalPriceLabel: UILabel!
+    @IBOutlet private weak var buyingSeatLabel: UILabel!
     var buyingSeatArray = [String]()
     var totalPrice = Int()
     var boarding = String()
@@ -87,9 +87,5 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource, UIText
         cell.nameTextField.delegate = self
         cell.ageTextField.delegate = self
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
 }

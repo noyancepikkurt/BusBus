@@ -134,11 +134,11 @@
             <objects>
                 <viewController storyboardIdentifier="myTickets" id="Oix-5i-b5g" customClass="MyTicketsViewController" customModule="BusBus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mS1-lK-BmP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-jK-pYW">
-                                <rect key="frame" x="16" y="37" width="361" height="794"/>
+                                <rect key="frame" x="16" y="81" width="361" height="711"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vqJ-PG-oVo">
                                         <rect key="frame" x="8" y="26" width="345" height="548"/>
@@ -170,7 +170,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biletlerim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKJ-7H-2uJ">
-                                <rect key="frame" x="16" y="-5" width="105" height="34"/>
+                                <rect key="frame" x="16" y="39" width="105" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="vaR-6B-j0D"/>
                                 </constraints>
@@ -1051,9 +1051,7 @@
                         <outlet property="phoneNumberTextField" destination="omV-bm-HVK" id="EAw-PB-GdR"/>
                         <outlet property="tableView" destination="mqO-Cu-yRN" id="zCi-Wk-WxL"/>
                         <outlet property="totalPriceLabel" destination="cHq-cC-1uf" id="TDr-7h-CP6"/>
-                        <segue destination="Oix-5i-b5g" kind="popover" identifier="toMyTicketsVC" id="eWR-Xr-I0U">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <segue destination="Oix-5i-b5g" kind="show" identifier="toMyTicketsVC" id="xMk-zM-EwC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ie2-u4-JbC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1380,7 +1378,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="cJy-9n-Ans"/>
-        <segue reference="eWR-Xr-I0U"/>
+        <segue reference="xMk-zM-EwC"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="a1" width="18.666666030883789" height="18"/>

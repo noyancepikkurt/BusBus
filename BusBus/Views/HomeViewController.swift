@@ -8,20 +8,20 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    @IBOutlet weak var dateTextField: UITextField!
-    @IBOutlet weak var boardingFromTextField: UITextField!
-    @IBOutlet weak var destinationTextField: UITextField!
-    @IBOutlet weak var heyLabel: UILabel!
+    @IBOutlet private weak var dateTextField: UITextField!
+    @IBOutlet private weak var boardingFromTextField: UITextField!
+    @IBOutlet private weak var destinationTextField: UITextField!
+    @IBOutlet private weak var heyLabel: UILabel!
     
-    var datePicker: UIDatePicker?
-    var boardingPickerView = UIPickerView()
-    var destinationPickerView = UIPickerView()
-    var cities = [String]()
-    let toolBar = UIToolbar()
-    let time = [8,10,9,7,11,10]
-    var findBusModel = [FindBusModel]()
-    var dateFormatter = DateFormatter()
-    var price = [400,350,300,350,400,300]
+    private var datePicker: UIDatePicker?
+    private var boardingPickerView = UIPickerView()
+    private var destinationPickerView = UIPickerView()
+    private var cities = [String]()
+    private let toolBar = UIToolbar()
+    private let time = [8,10,9,7,11,10]
+    private var findBusModel = [FindBusModel]()
+    private var dateFormatter = DateFormatter()
+    private var price = [400,350,300,350,400,300]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +57,7 @@ final class HomeViewController: UIViewController {
         dateTextField.text = result
     }
     
-    func datePickerConfig() {
+    private func datePickerConfig() {
         datePicker = UIDatePicker()
         dateTextField.attributedPlaceholder = NSAttributedString(string: "Tarih Seçiniz", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray6])
         datePicker?.datePickerMode = .date
@@ -72,7 +72,7 @@ final class HomeViewController: UIViewController {
         dateTextField.text = takenDate
     }
     
-    func citiesConfig() {
+    private func citiesConfig() {
         cities = ["Adana", "Adıyaman", "Afyon", "Ağrı", "Amasya", "Ankara", "Antalya", "Artvin", "Aydın", "Balıkesir", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Isparta", "İçel (Mersin)", "İstanbul", "İzmir", "Kars", "Kastamonu", "Kayseri", "Kırklareli", "Kırşehir", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Kahramanmaraş", "Mardin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yozgat", "Zonguldak", "Aksaray", "Bayburt", "Karaman", "Kırıkkale", "Batman", "Şırnak", "Bartın", "Ardahan", "Iğdır", "Yalova", "Karabük", "Kilis", "Osmaniye", "Düzce"]
         boardingFromTextField.inputView = boardingPickerView
         destinationTextField.inputView = destinationPickerView

@@ -8,8 +8,8 @@
 import UIKit
 
 final class OnboardingCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var onboardingImage: UIImageView!
-    @IBOutlet weak var onboardingDetail: UILabel!
+    @IBOutlet private weak var onboardingImage: UIImageView!
+    @IBOutlet private weak var onboardingDetail: UILabel!
     
     func setup(_ slide: OnboardingSlide) {
         onboardingImage.image = slide.image
