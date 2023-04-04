@@ -25,6 +25,7 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = UIColor.red
         datePickerConfig()
         citiesConfig()
         pickerViewConfig()
@@ -104,7 +105,6 @@ final class HomeViewController: UIViewController {
     @objc func cancelButtonAction() {
         view.endEditing(true)
     }
-    
 }
 
 extension HomeViewController: UIPickerViewDelegate, UIPickerViewDataSource {

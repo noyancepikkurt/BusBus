@@ -16,12 +16,12 @@ final class UserViewController: UIViewController {
     var buyingSeatArray = [String]()
     var totalPrice = Int()
     var boarding = String()
-    var destination = String() 
+    var destination = String()
     var date = String()
     var timeStarted = String()
     var passengerNames = [String]()
     var passengerAges = [Int]()
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let gestureRegoznizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -48,6 +48,8 @@ final class UserViewController: UIViewController {
         if passengerNames.count == buyingSeatArray.count && passengerAges.count == buyingSeatArray.count {
             tabBarController!.selectedIndex = 1
             NotificationCenter.default.post(name: .notificationName, object: nil, userInfo: ["buyingSeatArray":buyingSeatArray,"boarding":boarding,"destination":destination,"date":date,"timeStarted":timeStarted,"passengerNames":passengerNames,"passengerAges":passengerAges])
+            UserDefaults.standard.set(buyingSeatArray, forKey: "buyingSeatArray")
+            
         } else {
             UIAlertController.alertMessage(title: "Üzgünüz", message: "Eksik bilgi giriniz", vc: self)
         }
