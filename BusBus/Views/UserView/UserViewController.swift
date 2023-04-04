@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 final class UserViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var phoneNumberTextField: UITextField!
@@ -22,7 +21,7 @@ final class UserViewController: UIViewController {
     var timeStarted = String()
     var passengerNames = [String]()
     var passengerAges = [Int]()
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         let gestureRegoznizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -47,22 +46,10 @@ final class UserViewController: UIViewController {
     
     @IBAction func nextButtonAction(_ sender: Any) {
         if passengerNames.count == buyingSeatArray.count && passengerAges.count == buyingSeatArray.count {
-            performSegue(withIdentifier: "toMyTicketsVC", sender: nil)
+            tabBarController!.selectedIndex = 1
+            NotificationCenter.default.post(name: .notificationName, object: nil, userInfo: ["buyingSeatArray":buyingSeatArray,"boarding":boarding,"destination":destination,"date":date,"timeStarted":timeStarted,"passengerNames":passengerNames,"passengerAges":passengerAges])
         } else {
             UIAlertController.alertMessage(title: "Üzgünüz", message: "Eksik bilgi giriniz", vc: self)
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toMyTicketsVC" {
-            let destination = segue.destination as? MyTicketsViewController
-            destination?.selectedBuyingSeats = buyingSeatArray
-            destination?.boardingCity = boarding
-            destination?.destinationCity = self.destination
-            destination?.ticketDate = date
-            destination?.ticketTimeStarted = timeStarted
-            destination?.passengerNames = passengerNames
-            destination?.passengerAges = passengerAges
         }
     }
 }

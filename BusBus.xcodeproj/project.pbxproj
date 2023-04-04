@@ -22,6 +22,8 @@
 		5DC41AE929D99BB1002FE668 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC41AE829D99BB1002FE668 /* UserViewController.swift */; };
 		5DC41AF129D99CF2002FE668 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC41AEF29D99CF2002FE668 /* UserTableViewCell.swift */; };
 		5DC41AF229D99CF2002FE668 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC41AF029D99CF2002FE668 /* UserTableViewCell.xib */; };
+		5DC610A729DC18A1000A3AC5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC610A629DC18A1000A3AC5 /* SplashViewController.swift */; };
+		5DC610A929DC35F6000A3AC5 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC610A829DC35F6000A3AC5 /* NotificationExtension.swift */; };
 		5DCFEF8529D9D12300892066 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFEF8429D9D12300892066 /* SignUpViewController.swift */; };
 		5DCFEF8729D9D38F00892066 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DCFEF8629D9D38E00892066 /* GoogleService-Info.plist */; };
 		5DD3690E29D8859600356F4C /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3690D29D8859600356F4C /* TimeModel.swift */; };
@@ -60,6 +62,8 @@
 		5DC41AE829D99BB1002FE668 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		5DC41AEF29D99CF2002FE668 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		5DC41AF029D99CF2002FE668 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		5DC610A629DC18A1000A3AC5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		5DC610A829DC35F6000A3AC5 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 		5DCFEF8429D9D12300892066 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5DCFEF8629D9D38E00892066 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DD3690D29D8859600356F4C /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 			children = (
 				5D022E8F29D8502E004F92F7 /* UIView+Extension.swift */,
 				5DD3692229D8DACA00356F4C /* AlertExtension.swift */,
+				5DC610A829DC35F6000A3AC5 /* NotificationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 		5D5A316629DB65B2006E9442 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5DC610A629DC18A1000A3AC5 /* SplashViewController.swift */,
 				5D022E9A29D86469004F92F7 /* LoginViewController.swift */,
 				5DCFEF8429D9D12300892066 /* SignUpViewController.swift */,
 				5D022E9F29D8758B004F92F7 /* HomeViewController.swift */,
@@ -365,11 +371,13 @@
 				5D022E9B29D86469004F92F7 /* LoginViewController.swift in Sources */,
 				5DD3691D29D89FB500356F4C /* FindBusTableViewCell.swift in Sources */,
 				5D022E9229D850C1004F92F7 /* OnboardingSlide.swift in Sources */,
+				5DC610A929DC35F6000A3AC5 /* NotificationExtension.swift in Sources */,
 				5DED7E5F29D84C6500B87543 /* AppDelegate.swift in Sources */,
 				5D38D83229D9743B004AE21C /* SelectSeatViewController.swift in Sources */,
 				5DD3692329D8DACA00356F4C /* AlertExtension.swift in Sources */,
 				5D022EA029D8758B004F92F7 /* HomeViewController.swift in Sources */,
 				5DD3690E29D8859600356F4C /* TimeModel.swift in Sources */,
+				5DC610A729DC18A1000A3AC5 /* SplashViewController.swift in Sources */,
 				5DD3692129D8CB6100356F4C /* FindBusModel.swift in Sources */,
 				5DC41AD929D97BDD002FE668 /* SelectSeatCollectionViewCell.swift in Sources */,
 				5DD3691629D8862B00356F4C /* TicketModel.swift in Sources */,
