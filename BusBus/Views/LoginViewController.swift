@@ -39,15 +39,6 @@ final class LoginViewController: UIViewController {
         } else {
             UIAlertController.alertMessage(title: "Hata", message: "Kullanıcı adı veya şifre girilmedi", vc: self)
         }
-        
-        //Uygulama ikinci kez açılırsa tekrar onboarding ekranı gözükmemesi için
-        //        let defaults = UserDefaults.standard
-        //        if defaults.object(forKey: "FirstTime") == nil {
-        //            defaults.set("No",forKey: "FirstTime")
-        //            performSegue(withIdentifier: "toOnboardingVC", sender: nil)
-        //        } else {
-        //            performSegue(withIdentifier: "toHomeVC", sender: nil)
-        //        }
     }
     
     @IBAction func signUpButtonAction(_ sender: Any) {

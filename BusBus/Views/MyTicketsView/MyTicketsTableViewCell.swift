@@ -14,6 +14,7 @@ final class MyTicketsTableViewCell: UITableViewCell {
     @IBOutlet private weak var seatNumberLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var ticketTimeLabel: UILabel!
+    @IBOutlet private weak var passengerIdLabel: UILabel!
     
     func setup(_ ticketModel: TicketModel) {
         seatNumberLabel.text = ticketModel.seatNumber
@@ -22,5 +23,6 @@ final class MyTicketsTableViewCell: UITableViewCell {
         boardingLabel.text = ticketModel.boarding
         destinationLabel.text = ticketModel.destination
         passengerNameLabel.text = ticketModel.passenger.name
+        passengerIdLabel.text = ticketModel.passenger.id
     }
 }

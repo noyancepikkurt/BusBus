@@ -9,6 +9,5 @@ import Foundation
 
 struct PassengerModel {
     let name: String
-    let age: String
-    // let id: Int
+    let id: String
 }

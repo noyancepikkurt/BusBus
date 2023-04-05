@@ -16,6 +16,8 @@
 		5D97BC9B29D9FD7F00FD3ECA /* MyTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97BC9A29D9FD7F00FD3ECA /* MyTicketsViewController.swift */; };
 		5D97BC9E29DA02FF00FD3ECA /* MyTicketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D97BC9C29DA02FF00FD3ECA /* MyTicketsTableViewCell.swift */; };
 		5D97BC9F29DA02FF00FD3ECA /* MyTicketsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D97BC9D29DA02FF00FD3ECA /* MyTicketsTableViewCell.xib */; };
+		5D9BF7D729DD9C0800BF6152 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9BF7D529DD9C0800BF6152 /* SettingsTableViewCell.swift */; };
+		5D9BF7D829DD9C0800BF6152 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D9BF7D629DD9C0800BF6152 /* SettingsTableViewCell.xib */; };
 		5DA1286829D9E00A00FE9847 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1286729D9E00A00FE9847 /* SettingsViewController.swift */; };
 		5DC41AD929D97BDD002FE668 /* SelectSeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC41AD729D97BDD002FE668 /* SelectSeatCollectionViewCell.swift */; };
 		5DC41ADA29D97BDD002FE668 /* SelectSeatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC41AD829D97BDD002FE668 /* SelectSeatCollectionViewCell.xib */; };
@@ -24,7 +26,6 @@
 		5DC41AF229D99CF2002FE668 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC41AF029D99CF2002FE668 /* UserTableViewCell.xib */; };
 		5DC610A729DC18A1000A3AC5 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC610A629DC18A1000A3AC5 /* SplashViewController.swift */; };
 		5DC610A929DC35F6000A3AC5 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC610A829DC35F6000A3AC5 /* NotificationExtension.swift */; };
-		5DC610AC29DC6130000A3AC5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC610AB29DC6130000A3AC5 /* SearchViewController.swift */; };
 		5DCFEF8529D9D12300892066 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFEF8429D9D12300892066 /* SignUpViewController.swift */; };
 		5DCFEF8729D9D38F00892066 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DCFEF8629D9D38E00892066 /* GoogleService-Info.plist */; };
 		5DD3690E29D8859600356F4C /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD3690D29D8859600356F4C /* TimeModel.swift */; };
@@ -57,6 +58,8 @@
 		5D97BC9A29D9FD7F00FD3ECA /* MyTicketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsViewController.swift; sourceTree = "<group>"; };
 		5D97BC9C29DA02FF00FD3ECA /* MyTicketsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTicketsTableViewCell.swift; sourceTree = "<group>"; };
 		5D97BC9D29DA02FF00FD3ECA /* MyTicketsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTicketsTableViewCell.xib; sourceTree = "<group>"; };
+		5D9BF7D529DD9C0800BF6152 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		5D9BF7D629DD9C0800BF6152 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
 		5DA1286729D9E00A00FE9847 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5DC41AD729D97BDD002FE668 /* SelectSeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSeatCollectionViewCell.swift; sourceTree = "<group>"; };
 		5DC41AD829D97BDD002FE668 /* SelectSeatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectSeatCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -65,7 +68,6 @@
 		5DC41AF029D99CF2002FE668 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		5DC610A629DC18A1000A3AC5 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5DC610A829DC35F6000A3AC5 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
-		5DC610AB29DC6130000A3AC5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5DCFEF8429D9D12300892066 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5DCFEF8629D9D38E00892066 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DD3690D29D8859600356F4C /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
@@ -149,7 +151,7 @@
 		5D5A316629DB65B2006E9442 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5DC610AA29DC6116000A3AC5 /* SearchView */,
+				5D9BF7D429DD9BEE00BF6152 /* SettingsView */,
 				5D022E9429D85121004F92F7 /* OnboardingView */,
 				5DD3691829D89E9100356F4C /* FindBusView */,
 				5D38D83329D97442004AE21C /* SelectSeatView */,
@@ -159,7 +161,6 @@
 				5D022E9A29D86469004F92F7 /* LoginViewController.swift */,
 				5DCFEF8429D9D12300892066 /* SignUpViewController.swift */,
 				5D022E9F29D8758B004F92F7 /* HomeViewController.swift */,
-				5DA1286729D9E00A00FE9847 /* SettingsViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +188,16 @@
 			path = MyTicketsView;
 			sourceTree = "<group>";
 		};
+		5D9BF7D429DD9BEE00BF6152 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				5DA1286729D9E00A00FE9847 /* SettingsViewController.swift */,
+				5D9BF7D529DD9C0800BF6152 /* SettingsTableViewCell.swift */,
+				5D9BF7D629DD9C0800BF6152 /* SettingsTableViewCell.xib */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
 		5DC41AEC29D99BC5002FE668 /* UserView */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,14 +206,6 @@
 				5DC41AF029D99CF2002FE668 /* UserTableViewCell.xib */,
 			);
 			path = UserView;
-			sourceTree = "<group>";
-		};
-		5DC610AA29DC6116000A3AC5 /* SearchView */ = {
-			isa = PBXGroup;
-			children = (
-				5DC610AB29DC6130000A3AC5 /* SearchViewController.swift */,
-			);
-			path = SearchView;
 			sourceTree = "<group>";
 		};
 		5DD3691829D89E9100356F4C /* FindBusView */ = {
@@ -321,6 +324,7 @@
 				5DED7E6B29D84C6600B87543 /* LaunchScreen.storyboard in Resources */,
 				5DED7E6829D84C6600B87543 /* Assets.xcassets in Resources */,
 				5DED7E6629D84C6500B87543 /* Main.storyboard in Resources */,
+				5D9BF7D829DD9C0800BF6152 /* SettingsTableViewCell.xib in Resources */,
 				5D97BC9F29DA02FF00FD3ECA /* MyTicketsTableViewCell.xib in Resources */,
 				5DC41ADA29D97BDD002FE668 /* SelectSeatCollectionViewCell.xib in Resources */,
 				5DC41AF229D99CF2002FE668 /* UserTableViewCell.xib in Resources */,
@@ -380,8 +384,8 @@
 			files = (
 				5DCFEF8529D9D12300892066 /* SignUpViewController.swift in Sources */,
 				5D022E9B29D86469004F92F7 /* LoginViewController.swift in Sources */,
+				5D9BF7D729DD9C0800BF6152 /* SettingsTableViewCell.swift in Sources */,
 				5DD3691D29D89FB500356F4C /* FindBusTableViewCell.swift in Sources */,
-				5DC610AC29DC6130000A3AC5 /* SearchViewController.swift in Sources */,
 				5D022E9229D850C1004F92F7 /* OnboardingSlide.swift in Sources */,
 				5DC610A929DC35F6000A3AC5 /* NotificationExtension.swift in Sources */,
 				5DED7E5F29D84C6500B87543 /* AppDelegate.swift in Sources */,

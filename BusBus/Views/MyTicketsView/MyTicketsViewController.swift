@@ -15,12 +15,18 @@ final class MyTicketsViewController: UIViewController {
     var ticketDate = String()
     var ticketTimeStarted = String()
     var passengerNames = [String]()
-    var passengerAges = [Int]()
+    var passengerId = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableViewRegister()
         NotificationCenter.default.addObserver(self, selector: #selector(getData(notification:)), name: .notificationName, object: nil)
+        tableViewRegister()
+        tableViewConfig()
+    }
+    
+    private func tableViewConfig() {
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     @objc func getData(notification:NSNotification) {
@@ -30,8 +36,7 @@ final class MyTicketsViewController: UIViewController {
         ticketDate = notification.userInfo!["date"] as! String
         ticketTimeStarted = notification.userInfo!["timeStarted"] as! String
         passengerNames = notification.userInfo!["passengerNames"] as! [String]
-        passengerAges = notification.userInfo!["passengerAges"] as! [Int]
-        
+        passengerId = notification.userInfo!["passengerId"] as! [String]
     }
     
     private func tableViewRegister() {
@@ -46,7 +51,7 @@ extension MyTicketsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTicketsCell") as! MyTicketsTableViewCell
-        let ticketModel = TicketModel(passenger: PassengerModel(name: passengerNames[indexPath.row], age: "23"), Date: DateModel(date: ticketDate), Time: TimeModel(time: ticketTimeStarted), seatNumber: selectedBuyingSeats[indexPath.row], boarding: boardingCity, destination: destinationCity)
+        let ticketModel = TicketModel(passenger: PassengerModel(name: passengerNames[indexPath.row], id: passengerId[indexPath.row]), Date: DateModel(date: ticketDate), Time: TimeModel(time: ticketTimeStarted), seatNumber: selectedBuyingSeats[indexPath.row], boarding: boardingCity, destination: destinationCity)
         cell.setup(ticketModel)
         return cell
     }

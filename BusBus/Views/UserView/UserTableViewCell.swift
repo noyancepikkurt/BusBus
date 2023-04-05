@@ -14,6 +14,6 @@ final class UserTableViewCell: UITableViewCell {
     
     func setup(passengerModel: PassengerModel) {
         nameTextField.text = passengerModel.name
-        ageTextField.text = passengerModel.age
+        ageTextField.text = passengerModel.id
     }
 }

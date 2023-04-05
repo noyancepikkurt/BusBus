@@ -20,7 +20,7 @@ final class UserViewController: UIViewController {
     var date = String()
     var timeStarted = String()
     var passengerNames = [String]()
-    var passengerAges = [Int]()
+    var passengerId = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +45,12 @@ final class UserViewController: UIViewController {
     }
     
     @IBAction func nextButtonAction(_ sender: Any) {
-        if passengerNames.count == buyingSeatArray.count && passengerAges.count == buyingSeatArray.count {
+        if passengerNames.count == buyingSeatArray.count && passengerId.count == buyingSeatArray.count {
+            navigationController?.popToRootViewController(animated: true)
+            navigationController?.navigationBar.isHidden = true
             tabBarController!.selectedIndex = 1
-            NotificationCenter.default.post(name: .notificationName, object: nil, userInfo: ["buyingSeatArray":buyingSeatArray,"boarding":boarding,"destination":destination,"date":date,"timeStarted":timeStarted,"passengerNames":passengerNames,"passengerAges":passengerAges])
+            NotificationCenter.default.post(name: .notificationName, object: nil, userInfo: ["buyingSeatArray":buyingSeatArray,"boarding":boarding,"destination":destination,"date":date,"timeStarted":timeStarted,"passengerNames":passengerNames,"passengerId":passengerId])
+            
             UserDefaults.standard.set(buyingSeatArray, forKey: "buyingSeatArray")
             
         } else {
@@ -60,7 +63,7 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource, UIText
     func textFieldDidEndEditing(_ textField: UITextField) {
         let enteredText = textField.text!
         if let IntEnteredText = Int(enteredText) {
-            passengerAges.append(IntEnteredText)
+            passengerId.append(enteredText)
         } else {
             passengerNames.append(enteredText)
         }

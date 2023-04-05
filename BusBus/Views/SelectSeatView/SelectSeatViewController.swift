@@ -97,14 +97,14 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
         } else if koltukNo[indexPath.item] == "" {
             cell.viewForSelection.backgroundColor = UIColor.white
         }else {
-            cell.viewForSelection.backgroundColor = UIColor.systemGray2
+            cell.viewForSelection.backgroundColor = UIColor.systemGray4
             let seatLabel = cell.seatLabel.text!
             if let selectedSeats = selectedSeats {
                 for seatName in selectedSeats {
                     if let seatName = seatName as? String {
                         if seatLabel == seatName {
-                            cell.seatLabel.text = "test"
-                            cell.viewForSelection.backgroundColor = .black
+                            cell.seatLabel.text = "DOLU"
+                            cell.viewForSelection.backgroundColor = .systemGray
                             cell.isUserInteractionEnabled = false
                         }
                     }
