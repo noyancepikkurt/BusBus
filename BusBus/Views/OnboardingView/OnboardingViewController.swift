@@ -31,7 +31,7 @@ final class OnboardingViewController: UIViewController {
     private func slidesArrayConfig() {
         slides = [
             OnboardingSlide( detail: "Seni gördüğümüze sevindik", image: UIImage(named: "onboarding_first")!),
-            OnboardingSlide(detail: "Gitmek istediğin yeri seç ve senin için uygunluğunu gör", image: UIImage(named: "onboarding_second")!),
+            OnboardingSlide(detail: "Gitmek istediğin yeri seç", image: UIImage(named: "onboarding_second")!),
             OnboardingSlide(detail: "Şimdiden iyi yolculuklar!", image: UIImage(named: "onboarding_third")!)
         ]}
     

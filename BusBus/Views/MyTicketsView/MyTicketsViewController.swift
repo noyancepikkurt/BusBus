@@ -55,5 +55,15 @@ extension MyTicketsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.setup(ticketModel)
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.height / 4
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10  // hücreler arasındaki boşluk
+    }
+    
+    
 }
 

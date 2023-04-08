@@ -22,47 +22,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="361" height="196"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ad Soyad giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5c-x4-y9A">
-                                <rect key="frame" x="17" y="67" width="311" height="34"/>
+                                <rect key="frame" x="16" y="59.666666666666657" width="329" height="33.333333333333343"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yolcu 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTO-I7-qx8">
-                                <rect key="frame" x="16.999999999999996" y="22" width="55.666666666666657" height="21"/>
+                                <rect key="frame" x="16" y="16" width="145" height="19.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID giriniz" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VMj-ag-6ha">
-                                <rect key="frame" x="17" y="126" width="311" height="34"/>
+                                <rect key="frame" x="16" y="116.99999999999999" width="329" height="33.333333333333329"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="311" id="zzs-Cw-bZ3"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VMj-ag-6ha" firstAttribute="leading" secondItem="C5c-x4-y9A" secondAttribute="leading" id="77P-cZ-8ak"/>
-                            <constraint firstItem="C5c-x4-y9A" firstAttribute="top" secondItem="XTO-I7-qx8" secondAttribute="bottom" constant="24" id="DgA-w9-aHp"/>
-                            <constraint firstItem="C5c-x4-y9A" firstAttribute="top" secondItem="yG5-Nm-xk9" secondAttribute="top" constant="67" id="KtA-8f-jfR"/>
-                            <constraint firstAttribute="trailing" secondItem="C5c-x4-y9A" secondAttribute="trailing" constant="33" id="NDV-fT-4cU"/>
-                            <constraint firstItem="C5c-x4-y9A" firstAttribute="leading" secondItem="yG5-Nm-xk9" secondAttribute="leading" constant="17" id="iUQ-QC-d9O"/>
-                            <constraint firstItem="VMj-ag-6ha" firstAttribute="top" secondItem="C5c-x4-y9A" secondAttribute="bottom" constant="25" id="q1U-aC-LGl"/>
-                            <constraint firstItem="XTO-I7-qx8" firstAttribute="leading" secondItem="C5c-x4-y9A" secondAttribute="leading" id="ydt-Nh-3yE"/>
+                            <constraint firstItem="XTO-I7-qx8" firstAttribute="leading" secondItem="yG5-Nm-xk9" secondAttribute="leading" constant="16" id="0xm-jt-3zt"/>
+                            <constraint firstAttribute="trailing" secondItem="C5c-x4-y9A" secondAttribute="trailing" constant="16" id="DoY-tK-sGK"/>
+                            <constraint firstAttribute="trailing" secondItem="XTO-I7-qx8" secondAttribute="trailing" constant="200" id="FVi-Oo-UK8"/>
+                            <constraint firstItem="VMj-ag-6ha" firstAttribute="leading" secondItem="yG5-Nm-xk9" secondAttribute="leading" constant="16" id="LWJ-mc-J7t"/>
+                            <constraint firstItem="XTO-I7-qx8" firstAttribute="top" secondItem="yG5-Nm-xk9" secondAttribute="top" constant="16" id="RPE-e1-337"/>
+                            <constraint firstItem="VMj-ag-6ha" firstAttribute="top" secondItem="C5c-x4-y9A" secondAttribute="bottom" constant="24" id="eSQ-oX-6lL"/>
+                            <constraint firstItem="C5c-x4-y9A" firstAttribute="top" secondItem="XTO-I7-qx8" secondAttribute="bottom" constant="24" id="f7f-1r-zj9"/>
+                            <constraint firstAttribute="trailing" secondItem="VMj-ag-6ha" secondAttribute="trailing" constant="16" id="sTn-sb-mio"/>
+                            <constraint firstItem="C5c-x4-y9A" firstAttribute="leading" secondItem="yG5-Nm-xk9" secondAttribute="leading" constant="16" id="vgs-vh-p22"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="yG5-Nm-xk9" secondAttribute="trailing" id="PJa-d3-9rr"/>
-                    <constraint firstAttribute="bottom" secondItem="yG5-Nm-xk9" secondAttribute="bottom" id="bgW-wH-qnR"/>
-                    <constraint firstItem="yG5-Nm-xk9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lUg-PZ-tCr"/>
-                    <constraint firstItem="yG5-Nm-xk9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tAQ-J7-2kU"/>
+                    <constraint firstItem="yG5-Nm-xk9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ilc-Pn-Mlo"/>
+                    <constraint firstItem="yG5-Nm-xk9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Lhq-I1-f7x"/>
+                    <constraint firstAttribute="bottom" secondItem="yG5-Nm-xk9" secondAttribute="bottom" id="R4s-09-ywe"/>
+                    <constraint firstAttribute="trailing" secondItem="yG5-Nm-xk9" secondAttribute="trailing" id="YgA-wy-Uve"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="XTO-I7-qx8" firstAttribute="height" secondItem="njF-e1-oar" secondAttribute="height" multiplier="0.1" id="1zp-5S-3Iv"/>
+                <constraint firstItem="yG5-Nm-xk9" firstAttribute="height" secondItem="njF-e1-oar" secondAttribute="height" id="M3V-7T-J2R"/>
+                <constraint firstItem="C5c-x4-y9A" firstAttribute="height" secondItem="njF-e1-oar" secondAttribute="height" multiplier="0.17" id="hLH-85-PhI"/>
+                <constraint firstItem="VMj-ag-6ha" firstAttribute="height" secondItem="njF-e1-oar" secondAttribute="height" multiplier="0.17" id="qP2-QJ-MVB"/>
+            </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                     <real key="value" value="12"/>
