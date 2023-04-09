@@ -59,6 +59,16 @@ final class HomeViewController: UIViewController {
         dateTextField.text = result
     }
     
+    @IBAction func tomorrowButtonAction(_ sender: Any) {
+        let calendar = Calendar.current
+        var dateComponents = DateComponents()
+        dateComponents.day = 1
+        let tomorrow = calendar.date(byAdding: dateComponents, to: Date())!
+        dateFormatter.dateFormat = "dd.MM.yy"
+        let result = dateFormatter.string(from: tomorrow)
+        dateTextField.text = result
+    }
+    
     private func datePickerConfig() {
         datePicker = UIDatePicker()
         dateTextField.attributedPlaceholder = NSAttributedString(string: "Tarih Seçiniz", attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray6])

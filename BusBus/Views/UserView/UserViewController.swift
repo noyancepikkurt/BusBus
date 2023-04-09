@@ -54,7 +54,7 @@ final class UserViewController: UIViewController {
             UserDefaults.standard.set(buyingSeatArray, forKey: "buyingSeatArray")
             
         } else {
-            UIAlertController.alertMessage(title: "Üzgünüz", message: "Eksik bilgi giriniz", vc: self)
+            UIAlertController.alertMessage(title: "Üzgünüz", message: "Eksik bilgi girdiniz, lütfen koltuk seçim ekranına dönüp tekrardan deneyiniz", vc: self)
         }
     }
 }
