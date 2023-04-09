@@ -43,4 +43,10 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.imageCell.image = UIImage(named: settingsImages[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            performSegue(withIdentifier: "toMyProfileVC", sender: nil)
+        }
+    }
 }

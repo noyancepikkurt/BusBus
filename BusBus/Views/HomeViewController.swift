@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import SDWebImage
 
 final class HomeViewController: UIViewController {
     @IBOutlet private weak var dateTextField: UITextField!
     @IBOutlet private weak var boardingFromTextField: UITextField!
     @IBOutlet private weak var destinationTextField: UITextField!
     @IBOutlet private weak var heyLabel: UILabel!
+    @IBOutlet var profileImage: UIImageView!
     
     private var datePicker: UIDatePicker?
     private var boardingPickerView = UIPickerView()
@@ -30,6 +34,7 @@ final class HomeViewController: UIViewController {
         citiesConfig()
         pickerViewConfig()
         toolBarConfig()
+        getDataFromFirestore()
     }
     
     @IBAction func findBusButtonAction(_ sender: Any) {
@@ -51,6 +56,37 @@ final class HomeViewController: UIViewController {
             destination?.boarding = boardingFromTextField.text!
             destination?.destination = destinationTextField.text!
             destination?.date = dateTextField.text!
+        }
+    }
+    
+    private func getDataFromFirestore() {
+        let firestoreDatabase = Firestore.firestore()
+        let collectionRef = firestoreDatabase.collection("ProfileImages")
+        collectionRef.addSnapshotListener { snapshot, error in
+            if error != nil {
+                UIAlertController.alertMessage(title: "Hata", message: error!.localizedDescription , vc: self)
+            } else {
+                if snapshot?.isEmpty != true && snapshot != nil {
+                    for document in snapshot!.documents {
+                        let documentID = document.documentID
+                        
+                        let query = collectionRef.whereField("imageBy", isEqualTo: Auth.auth().currentUser?.email)
+                        
+                        query.getDocuments { (snapshot, error) in
+                            if let error = error {
+                                print("Error getting documents: \(error)")
+                            } else {
+                                for document in snapshot!.documents {
+                                    if let imageUrl = document.get("imageUrl") as? String {
+                                        self.profileImage.sd_setImage(with: URL(string: imageUrl))
+                                    }
+                                    print("\(document.documentID) => \(document.data())")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
     
