@@ -62,7 +62,7 @@ final class UserViewController: UIViewController {
 extension UserViewController: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         let enteredText = textField.text!
-        if let IntEnteredText = Int(enteredText) {
+        if let _ = Int(enteredText) {
             passengerId.append(enteredText)
         } else {
             passengerNames.append(enteredText)
@@ -77,7 +77,8 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource, UIText
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell") as! UserTableViewCell
         cell.passengerLabel.text = "Yolcu \(indexPath.item + 1)"
         cell.nameTextField.delegate = self
-        cell.ageTextField.delegate = self
+        cell.idTextField.delegate = self
+        
         return cell
     }
 }

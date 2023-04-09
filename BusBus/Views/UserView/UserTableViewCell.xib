@@ -37,7 +37,7 @@
                                 <rect key="frame" x="16" y="116.99999999999999" width="329" height="33.333333333333329"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,7 +74,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="ageTextField" destination="VMj-ag-6ha" id="Wvu-zy-uIi"/>
+                <outlet property="idTextField" destination="VMj-ag-6ha" id="Wvu-zy-uIi"/>
                 <outlet property="nameTextField" destination="C5c-x4-y9A" id="09I-ns-6KS"/>
                 <outlet property="passengerLabel" destination="XTO-I7-qx8" id="Ge7-q8-SKR"/>
             </connections>

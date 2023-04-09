@@ -15,6 +15,8 @@ final class MyTicketsTableViewCell: UITableViewCell {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var ticketTimeLabel: UILabel!
     @IBOutlet private weak var passengerIdLabel: UILabel!
+    @IBOutlet private var cellImageView: UIImageView!
+    
     
     func setup(_ ticketModel: TicketModel) {
         seatNumberLabel.text = ticketModel.seatNumber
@@ -24,5 +26,6 @@ final class MyTicketsTableViewCell: UITableViewCell {
         destinationLabel.text = ticketModel.destination
         passengerNameLabel.text = ticketModel.passenger.name
         passengerIdLabel.text = ticketModel.passenger.id
+        cellImageView.image = ticketModel.qr
     }
 }

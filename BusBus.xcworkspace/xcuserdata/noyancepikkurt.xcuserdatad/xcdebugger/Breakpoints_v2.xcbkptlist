@@ -46,8 +46,8 @@
             filePath = "BusBus/Views/MyTicketsView/MyTicketsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "getData(notification:)"
             landmarkType = "7">
          </BreakpointContent>

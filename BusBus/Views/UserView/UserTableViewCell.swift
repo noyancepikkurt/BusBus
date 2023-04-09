@@ -10,10 +10,10 @@ import UIKit
 final class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var passengerLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var idTextField: UITextField!
     
     func setup(passengerModel: PassengerModel) {
         nameTextField.text = passengerModel.name
-        ageTextField.text = passengerModel.id
+        idTextField.text = passengerModel.id
     }
 }

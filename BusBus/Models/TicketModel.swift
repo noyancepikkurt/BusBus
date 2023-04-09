@@ -5,7 +5,7 @@
 //  Created by Noyan Çepikkurt on 1.04.2023.
 //
 
-import Foundation
+import UIKit
 
 struct TicketModel {
     var passenger: PassengerModel
@@ -14,4 +14,5 @@ struct TicketModel {
     var seatNumber: String
     var boarding: String
     var destination: String
+    var qr: UIImage?
 }
