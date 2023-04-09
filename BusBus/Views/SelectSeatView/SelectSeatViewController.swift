@@ -94,6 +94,7 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
         
         if selectedSeatIndex.contains(indexPath.item) {
             cell.viewForSelection.backgroundColor = UIColor.red
+            
         } else if koltukNo[indexPath.item] == "" {
             cell.viewForSelection.backgroundColor = UIColor.white
         }else {
@@ -125,6 +126,10 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
         } else {
             selectedSeat.append(koltukNo[indexPath.item])
             selectedSeatIndex.append(indexPath.item)
+        }
+        
+        if koltukNo[indexPath.item] == "" {
+            UIAlertController.alertMessage(title: "Yalnızca harf bulunduran koltukları seçebilirsiniz", message: "Sonraki sayfada hatalı koltuklar kaldırılacaktır", vc: self)
         }
         collectionView.reloadData()
     }

@@ -21,7 +21,6 @@ final class MyTicketsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(getData(notification:)), name: .notificationName, object: nil)
-        
         tableViewRegister()
         tableViewConfig()
     }
@@ -53,11 +52,9 @@ extension MyTicketsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTicketsCell") as! MyTicketsTableViewCell
-        
-        let myId = passengerId
-        let combinedString = "Bilet Sahibi: \(passengerNames[indexPath.row])\nBilet ID: \(myId[indexPath.row])\nTarih: \(ticketDate)"
-        
-        let nameData = combinedString.data(using: .ascii)
+        //QR
+        let combinedString = "Bilet Sahibi: \(passengerNames[indexPath.row])\nBilet ID: \(passengerId[indexPath.row])\nKoltuk Numaran: \(selectedBuyingSeats[indexPath.row])\nTarih: \(ticketDate)"
+        let nameData = combinedString.data(using: String.Encoding.ascii)
         if let filter = CIFilter(name: "CIQRCodeGenerator") {
             filter.setValue(nameData, forKey: "inputMessage")
             let transform = CGAffineTransform(scaleX: 3, y: 3)

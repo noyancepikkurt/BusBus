@@ -35,6 +35,9 @@ final class UserViewController: UIViewController {
     }
     
     private func arrayToString() {
+        if let index = buyingSeatArray.firstIndex(of: "") {
+            buyingSeatArray.remove(at: index)
+        }
         let seatsString = buyingSeatArray.joined(separator: ",")
         buyingSeatLabel.text = seatsString
         totalPriceLabel.text = "\(totalPrice) ₺"

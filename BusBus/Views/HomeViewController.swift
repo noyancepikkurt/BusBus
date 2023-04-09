@@ -37,6 +37,8 @@ final class HomeViewController: UIViewController {
             UIAlertController.alertMessage(title: "Hata", message: "Binilen veya gidilecek yer girilmedi", vc: self)
         } else if dateTextField.text == "" {
             UIAlertController.alertMessage(title: "Hata", message: "Tarih Girilmedi", vc: self)
+        } else if boardingFromTextField.text == destinationTextField.text {
+            UIAlertController.alertMessage(title: "Hata", message: "Aynı Şehirler arası gidemezsiniz", vc: self)
         } else {
             performSegue(withIdentifier: "toFindBusVC", sender: nil)
         }
