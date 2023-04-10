@@ -38,6 +38,7 @@ final class MyTicketsViewController: UIViewController {
         ticketTimeStarted = notification.userInfo!["timeStarted"] as! String
         passengerNames = notification.userInfo!["passengerNames"] as! [String]
         passengerId = notification.userInfo!["passengerId"] as! [String]
+        tableView.reloadData()
     }
     
     private func tableViewRegister() {
@@ -60,6 +61,8 @@ extension MyTicketsViewController: UITableViewDelegate, UITableViewDataSource {
             let transform = CGAffineTransform(scaleX: 3, y: 3)
             if let output = filter.outputImage?.transformed(by: transform) {
                 qr.append(UIImage(ciImage: output))
+            } else {
+                qr.append(UIImage(named: "qr")!)
             }
         }
         

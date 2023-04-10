@@ -18,13 +18,16 @@ final class MyProfileViewController: UIViewController, UIImagePickerControllerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageConfig()
         indicatorConfig()
         getDataFromFireDatabase()
     }
     
+    override func viewDidLayoutSubviews() {
+        imageConfig()
+    }
+    
     private func indicatorConfig() {
-        activityIndicator = UIActivityIndicatorView(style: .gray)
+        activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
         activityIndicator.color = .red
         activityIndicator.center = view.center
         activityIndicator.hidesWhenStopped = true
@@ -86,11 +89,12 @@ final class MyProfileViewController: UIViewController, UIImagePickerControllerDe
     }
     
     @IBAction func saveButtonAction(_ sender: Any) {
+        activityIndicator.startAnimating()
         let storage = Storage.storage()
         let storageReference = storage.reference()
         let mediaFolder = storageReference.child("media")
         
-        if let data = profileImageView.image?.jpegData(compressionQuality: 0.5) {
+        if let data = profileImageView.image?.jpegData(compressionQuality: 0.25) {
             let uuid = UUID().uuidString
             
             let imageReference = mediaFolder.child("\(uuid).jpg")
@@ -112,12 +116,14 @@ final class MyProfileViewController: UIViewController, UIImagePickerControllerDe
                                 } else {
                                     if let document = snapshot?.documents.first {
                                         document.reference.updateData(["imageUrl":imageUrl])
+                                        self.dismiss(animated: true)
                                     } else {
                                         let fireStoreImages = ["imageUrl":imageUrl,"imageBy":Auth.auth().currentUser?.email]
                                         firestoreDatabase.collection("ProfileImages").addDocument(data: fireStoreImages as [String : Any]) { error in
                                             if let error = error {
                                                 print(error.localizedDescription)
                                             }
+                                            self.dismiss(animated: true)
                                         }
                                     }
                                 }
@@ -127,6 +133,5 @@ final class MyProfileViewController: UIViewController, UIImagePickerControllerDe
                 }
             }
         }
-        activityIndicator.startAnimating()
     }
 }

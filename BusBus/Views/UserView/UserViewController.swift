@@ -51,8 +51,6 @@ final class UserViewController: UIViewController {
     
     @IBAction func nextButtonAction(_ sender: Any) {
         if passengerNames.count == buyingSeatArray.count && passengerId.count == buyingSeatArray.count {
-            navigationController?.popToRootViewController(animated: true)
-            navigationController?.navigationBar.isHidden = true
             tabBarController!.selectedIndex = 1
             NotificationCenter.default.post(name: .notificationName, object: nil, userInfo: ["buyingSeatArray":buyingSeatArray,"boarding":boarding,"destination":destination,"date":date,"timeStarted":timeStarted,"passengerNames":passengerNames,"passengerId":passengerId])
             
