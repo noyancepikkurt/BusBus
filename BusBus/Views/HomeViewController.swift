@@ -34,7 +34,16 @@ final class HomeViewController: UIViewController {
         citiesConfig()
         pickerViewConfig()
         toolBarConfig()
+        profileImageConfig()
         getDataFromFirestore()
+    }
+    
+    private func profileImageConfig() {
+        profileImage.layer.borderWidth = 1.0
+        profileImage.layer.masksToBounds = false
+        profileImage.layer.borderColor = UIColor.red.cgColor
+        profileImage.layer.cornerRadius = profileImage.frame.size.width/2
+        profileImage.clipsToBounds = true
     }
     
     @IBAction func findBusButtonAction(_ sender: Any) {
@@ -64,7 +73,6 @@ final class HomeViewController: UIViewController {
         let collectionRef = firestoreDatabase.collection("ProfileImages")
         collectionRef.addSnapshotListener { snapshot, error in
             if error != nil {
-                UIAlertController.alertMessage(title: "Hata", message: error!.localizedDescription , vc: self)
             } else {
                 if snapshot?.isEmpty != true && snapshot != nil {
                     for document in snapshot!.documents {

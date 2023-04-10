@@ -28,7 +28,7 @@ final class MyProfileViewController: UIViewController, UIImagePickerControllerDe
         
         collectionRef.addSnapshotListener { snapshot, error in
             if error != nil {
-                UIAlertController.alertMessage(title: "Hata", message: error!.localizedDescription , vc: self)
+                UIAlertController.alertMessage(title: "Hata", message: "Bu ekranda değişiklik yapmak için giriş yapmalısınız" , vc: self)
             } else {
                 if snapshot?.isEmpty != true && snapshot != nil {
                     for _ in snapshot!.documents {
@@ -52,11 +52,10 @@ final class MyProfileViewController: UIViewController, UIImagePickerControllerDe
     }
     
     private func imageConfig() {
-        self.profileImageView.layer.borderWidth = 1
-        self.profileImageView.layer.borderColor = UIColor.red.cgColor
-        self.profileImageView.layer.masksToBounds = false
-        self.profileImageView.layer.cornerRadius = profileImageView.frame.size.height / 2
-        self.profileImageView.clipsToBounds = true
+        profileImageView?.layer.cornerRadius = (profileImageView?.frame.size.width ?? 0.0) / 2
+        profileImageView?.clipsToBounds = true
+        profileImageView?.layer.borderWidth = 3.0
+        profileImageView?.layer.borderColor = UIColor.red.cgColor
         profileImageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(chooseImage))
         profileImageView.addGestureRecognizer(gestureRecognizer)

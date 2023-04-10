@@ -17,7 +17,6 @@ final class MyTicketsTableViewCell: UITableViewCell {
     @IBOutlet private weak var passengerIdLabel: UILabel!
     @IBOutlet private var cellImageView: UIImageView!
     
-    
     func setup(_ ticketModel: TicketModel) {
         seatNumberLabel.text = ticketModel.seatNumber
         dateLabel.text = ticketModel.Date.date

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 final class UserViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
@@ -24,6 +25,7 @@ final class UserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.text = Auth.auth().currentUser?.email
         let gestureRegoznizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(gestureRegoznizer)
         tableViewRegister()
