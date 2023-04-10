@@ -15,7 +15,7 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var boardingFromTextField: UITextField!
     @IBOutlet private weak var destinationTextField: UITextField!
     @IBOutlet private weak var heyLabel: UILabel!
-    @IBOutlet var profileImage: UIImageView!
+    @IBOutlet private var profileImage: UIImageView!
     
     private var datePicker: UIDatePicker?
     private var boardingPickerView = UIPickerView()
@@ -68,10 +68,9 @@ final class HomeViewController: UIViewController {
             } else {
                 if snapshot?.isEmpty != true && snapshot != nil {
                     for document in snapshot!.documents {
-                        let documentID = document.documentID
+                        _ = document.documentID
                         
-                        let query = collectionRef.whereField("imageBy", isEqualTo: Auth.auth().currentUser?.email)
-                        
+                        let query = collectionRef.whereField("imageBy", isEqualTo: Auth.auth().currentUser?.email as Any)
                         query.getDocuments { (snapshot, error) in
                             if let error = error {
                                 print("Error getting documents: \(error)")
@@ -80,7 +79,6 @@ final class HomeViewController: UIViewController {
                                     if let imageUrl = document.get("imageUrl") as? String {
                                         self.profileImage.sd_setImage(with: URL(string: imageUrl))
                                     }
-                                    print("\(document.documentID) => \(document.data())")
                                 }
                             }
                         }

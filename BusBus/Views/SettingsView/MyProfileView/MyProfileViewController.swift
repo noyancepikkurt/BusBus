@@ -11,30 +11,28 @@ import FirebaseStorage
 import FirebaseFirestore
 import SDWebImage
 
-class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
-    
-    @IBOutlet var profileImageView: UIImageView!
-    @IBOutlet var profileLabel: UILabel!
+final class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
+    @IBOutlet private var profileImageView: UIImageView!
+    @IBOutlet private var profileLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageConfig()
         getDataFromFireDatabase()
-        
     }
     
     private func getDataFromFireDatabase() {
         profileLabel.text = Auth.auth().currentUser?.email
         let firestoreDatabase = Firestore.firestore()
         let collectionRef = firestoreDatabase.collection("ProfileImages")
+        
         collectionRef.addSnapshotListener { snapshot, error in
             if error != nil {
                 UIAlertController.alertMessage(title: "Hata", message: error!.localizedDescription , vc: self)
             } else {
                 if snapshot?.isEmpty != true && snapshot != nil {
-                    for document in snapshot!.documents {
-                        let documentID = document.documentID
-                        let query = collectionRef.whereField("imageBy", isEqualTo: Auth.auth().currentUser?.email)
+                    for _ in snapshot!.documents {
+                        let query = collectionRef.whereField("imageBy", isEqualTo: Auth.auth().currentUser?.email as Any)
                         
                         query.getDocuments { (snapshot, error) in
                             if let error = error {
@@ -44,7 +42,6 @@ class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate
                                     if let imageUrl = document.get("imageUrl") as? String {
                                         self.profileImageView.sd_setImage(with: URL(string: imageUrl))
                                     }
-                                    print("\(document.documentID) => \(document.data())")
                                 }
                             }
                         }
@@ -52,7 +49,6 @@ class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate
                 }
             }
         }
-        dismiss(animated: true)
     }
     
     private func imageConfig() {
@@ -97,19 +93,30 @@ class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate
                             let imageUrl = url?.absoluteString
                             
                             let firestoreDatabase = Firestore.firestore()
-                            var firestoreReference : DocumentReference? = nil
                             guard let imageUrl = imageUrl else { return }
-                            guard let imageBy = Auth.auth().currentUser?.email else { return }
-                            let firestoreImages = ["imageUrl":imageUrl,"imageBy": imageBy]
-                            firestoreReference = firestoreDatabase.collection("ProfileImages").addDocument(data: firestoreImages, completion: { (error) in
-                                if error != nil {
-                                    UIAlertController.alertMessage(title: "Hata", message: error?.localizedDescription ?? "Hata", vc: self)
+                            
+                            let query = firestoreDatabase.collection("ProfileImages").whereField("imageBy", isEqualTo: Auth.auth().currentUser?.email as Any)
+                            query.getDocuments { (snapshot, error) in
+                                if let error = error {
+                                    print(error.localizedDescription)
+                                } else {
+                                    if let document = snapshot?.documents.first {
+                                        document.reference.updateData(["imageUrl":imageUrl])
+                                    } else {
+                                        let fireStoreImages = ["imageUrl":imageUrl,"imageBy":Auth.auth().currentUser?.email]
+                                        firestoreDatabase.collection("ProfileImages").addDocument(data: fireStoreImages as [String : Any]) { error in
+                                            if let error = error {
+                                                print(error.localizedDescription)
+                                            }
+                                        }
+                                    }
                                 }
-                            })
+                            }
                         }
                     }
                 }
             }
         }
+        getDataFromFireDatabase()
     }
 }
