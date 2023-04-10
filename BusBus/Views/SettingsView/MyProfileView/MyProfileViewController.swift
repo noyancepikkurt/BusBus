@@ -14,11 +14,21 @@ import SDWebImage
 final class MyProfileViewController: UIViewController, UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     @IBOutlet private var profileImageView: UIImageView!
     @IBOutlet private var profileLabel: UILabel!
+    private var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imageConfig()
+        indicatorConfig()
         getDataFromFireDatabase()
+    }
+    
+    private func indicatorConfig() {
+        activityIndicator = UIActivityIndicatorView(style: .gray)
+        activityIndicator.color = .red
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        view.addSubview(activityIndicator)
     }
     
     private func getDataFromFireDatabase() {
@@ -41,6 +51,7 @@ final class MyProfileViewController: UIViewController, UIImagePickerControllerDe
                                 for document in snapshot!.documents {
                                     if let imageUrl = document.get("imageUrl") as? String {
                                         self.profileImageView.sd_setImage(with: URL(string: imageUrl))
+                                        self.activityIndicator.stopAnimating()
                                     }
                                 }
                             }
@@ -116,6 +127,6 @@ final class MyProfileViewController: UIViewController, UIImagePickerControllerDe
                 }
             }
         }
-        getDataFromFireDatabase()
+        activityIndicator.startAnimating()
     }
 }
