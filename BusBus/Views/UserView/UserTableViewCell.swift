@@ -11,9 +11,4 @@ final class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var passengerLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
-    
-    func setup(passengerModel: PassengerModel) {
-        nameTextField.text = passengerModel.name
-        idTextField.text = passengerModel.id
-    }
 }

@@ -111,7 +111,6 @@ extension SelectSeatViewController: UICollectionViewDelegate, UICollectionViewDa
                     }
                 }
             }
-            
         }
         return cell
     }

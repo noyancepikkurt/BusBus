@@ -133,10 +133,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-jK-pYW">
-                                <rect key="frame" x="16" y="149" width="361" height="605.66666666666663"/>
+                                <rect key="frame" x="16" y="94" width="361" height="685"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vqJ-PG-oVo">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="605.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="685"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="separatorColor" systemColor="systemRedColor"/>
                                         <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
@@ -161,7 +161,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biletlerim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKJ-7H-2uJ">
-                                <rect key="frame" x="16" y="99" width="217" height="30"/>
+                                <rect key="frame" x="16" y="40" width="217" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -199,10 +199,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yb3-mx-ogM">
-                                <rect key="frame" x="16" y="153" width="361" height="522"/>
+                                <rect key="frame" x="16" y="94" width="361" height="615"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VUo-Nf-8hR">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="522"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="615"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -229,7 +229,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ayarlarım" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ4-IB-qPJ">
-                                <rect key="frame" x="16" y="99" width="361" height="34"/>
+                                <rect key="frame" x="16" y="40" width="361" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="L8X-vF-dI8"/>
                                 </constraints>
@@ -238,7 +238,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfj-If-dcP">
-                                <rect key="frame" x="140" y="691" width="113" height="52"/>
+                                <rect key="frame" x="140" y="725" width="113" height="52"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="oax-gd-LnS"/>
@@ -1574,7 +1574,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Eyz-yF-ult"/>
         <segue reference="JBk-bM-mHp"/>
         <segue reference="cJy-9n-Ans"/>
     </inferredMetricsTieBreakers>

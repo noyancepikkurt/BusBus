@@ -9,6 +9,7 @@ import UIKit
 
 final class SelectSeatCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var viewForSelection: UIView!
+    @IBOutlet var seatImage: UIImageView!
     @IBOutlet weak var seatLabel: UILabel!
     
     override func awakeFromNib() {

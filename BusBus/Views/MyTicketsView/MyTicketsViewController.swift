@@ -51,21 +51,23 @@ extension MyTicketsViewController: UITableViewDelegate, UITableViewDataSource {
         return selectedBuyingSeats.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTicketsCell") as! MyTicketsTableViewCell
-        //QR
-        let combinedString = "Bilet Sahibi: \(passengerNames[indexPath.row])\nBilet ID: \(passengerId[indexPath.row])\nKoltuk Numaran: \(selectedBuyingSeats[indexPath.row])\nTarih: \(ticketDate)"
-        let nameData = combinedString.data(using: String.Encoding.ascii)
-        if let filter = CIFilter(name: "CIQRCodeGenerator") {
-            filter.setValue(nameData, forKey: "inputMessage")
-            let transform = CGAffineTransform(scaleX: 3, y: 3)
-            if let output = filter.outputImage?.transformed(by: transform) {
-                qr.append(UIImage(ciImage: output))
-            } else {
-                qr.append(UIImage(named: "qr")!)
+    private func generateQRImages() {
+        for i in 0..<passengerNames.count {
+            let combinedString = "Bilet Sahibi: \(passengerNames[i])\nBilet ID: \(passengerId[i])\nKoltuk Numaran: \(selectedBuyingSeats[i])\nTarih: \(ticketDate)"
+            let nameData = combinedString.data(using: String.Encoding.ascii)
+            if let filter = CIFilter(name: "CIQRCodeGenerator") {
+                filter.setValue(nameData, forKey: "inputMessage")
+                let transform = CGAffineTransform(scaleX: 3, y: 3)
+                if let output = filter.outputImage?.transformed(by: transform) {
+                    qr.append(UIImage(ciImage: output))
+                }
             }
         }
-        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MyTicketsCell") as! MyTicketsTableViewCell
+        generateQRImages()
         let ticketModel = TicketModel(passenger: PassengerModel(name: passengerNames[indexPath.row], id: passengerId[indexPath.row]), Date: DateModel(date: ticketDate), Time: TimeModel(time: ticketTimeStarted), seatNumber: selectedBuyingSeats[indexPath.row], boarding: boardingCity, destination: destinationCity,qr: qr[indexPath.row])
         cell.setup(ticketModel)
         return cell
