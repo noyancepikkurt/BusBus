@@ -5,7 +5,7 @@ I used Firebase to save user infos on sign up page and profile picture changing.
 
 
 ## Screenshots
-<img width="170" src="https://user-images.githubusercontent.com/127404543/231181057-bde1e508-205a-427d-84f8-39f83bb5d3f9.png"><img width="170" src="https://user-images.githubusercontent.com/127404543/231181116-b53aaf97-7b4d-4684-8b1f-b96c0e3b3ccc.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181057-bde1e508-205a-427d-84f8-39f83bb5d3f9.png"> <img width="170" src="https://user-images.githubusercontent.com/127404543/231181116-b53aaf97-7b4d-4684-8b1f-b96c0e3b3ccc.png">
 <img width="170" src="https://user-images.githubusercontent.com/127404543/231181139-b0cd7d98-7df5-4f38-a362-a643e132437f.png">
 <img width="170" src="https://user-images.githubusercontent.com/127404543/231181162-01519363-9026-4a05-8411-10f049f3e75d.png">
 <img width="170" src="https://user-images.githubusercontent.com/127404543/231181317-4a44dddd-4365-4bf1-a5d8-b872edd9ed63.png">
