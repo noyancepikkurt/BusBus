@@ -3,14 +3,19 @@ After registering and logging into the application, you can buy a bus ticket. Fi
 
 I used Firebase to save user infos on sign up page. Generally, I have used 'segue' to pass data between screens, but I also used UserDefaults and NotificationCenter in the final pages. I practiced using as many different things as I could.
 
-
 ## Screenshots
-<img width="170" src="https://user-images.githubusercontent.com/127404543/230210101-784265dc-dc22-4731-8de0-462d4d458f70.png"><img width="170" src="https://user-images.githubusercontent.com/127404543/230212105-63a0f9ed-c37c-4ab0-ae85-a03195af806d.png">
-<img width="170" src="https://user-images.githubusercontent.com/127404543/230210167-283ccb9b-1ed1-46fa-ad2b-d28c92daa478.png">
-<img width="170" src="https://user-images.githubusercontent.com/127404543/230210241-9d5917dd-6f63-401f-bacd-5b4e90667229.png">
-<img width="170" src="https://user-images.githubusercontent.com/127404543/230210313-9563f5bb-f552-42fe-9da6-de3d062cb516.png">
-<img width="170" src="https://user-images.githubusercontent.com/127404543/230210321-907220f5-066e-4194-9ada-f403a26d4886.png">
-<img width="170" src="https://user-images.githubusercontent.com/127404543/230210400-e9fd1517-3b8b-459f-9c88-217f292d0d20.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181057-bde1e508-205a-427d-84f8-39f83bb5d3f9.png"><img width="170" src="https://user-images.githubusercontent.com/127404543/231181116-b53aaf97-7b4d-4684-8b1f-b96c0e3b3ccc.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181139-b0cd7d98-7df5-4f38-a362-a643e132437f.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181162-01519363-9026-4a05-8411-10f049f3e75d.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181317-4a44dddd-4365-4bf1-a5d8-b872edd9ed63.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181334-f8a96dd0-3634-4c82-9822-720df0de3d59.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181353-bc0a7e51-c7d0-4a84-b4c0-554caf139ac1.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181376-553e8984-46ef-4ffa-9511-12d7d1763e64.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181568-ff0c306e-943b-4b43-a1d5-a18af68a6aa4.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181579-cb27f0f8-24b0-4c6f-83d1-1d36f6d3a8a1.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181620-1da1794e-4574-4d9c-909f-20df415eb15f.png">
+<img width="170" src="https://user-images.githubusercontent.com/127404543/231181649-d361808a-6d2b-4b13-8fb2-dd9e86fd957f.png">
+
 
 
 ## Demo Video
