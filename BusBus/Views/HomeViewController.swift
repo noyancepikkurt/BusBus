@@ -16,7 +16,6 @@ final class HomeViewController: UIViewController {
     @IBOutlet private weak var destinationTextField: UITextField!
     @IBOutlet private weak var heyLabel: UILabel!
     @IBOutlet private var profileImage: UIImageView!
-    
     private var datePicker: UIDatePicker?
     private var boardingPickerView = UIPickerView()
     private var destinationPickerView = UIPickerView()

@@ -64,7 +64,6 @@ final class UserViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [self] in
                 tabBarController!.selectedIndex = 1
                 NotificationCenter.default.post(name: .notificationName, object: nil, userInfo: ["buyingSeatArray":buyingSeatArray,"boarding":boarding,"destination":destination,"date":date,"timeStarted":timeStarted,"passengerNames":passengerNames,"passengerId":passengerId])
-                
                 UserDefaults.standard.set(buyingSeatArray, forKey: "buyingSeatArray")
                 self.activityIndicator.stopAnimating()
             }

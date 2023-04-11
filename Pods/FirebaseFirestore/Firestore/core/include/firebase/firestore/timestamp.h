@@ -103,8 +103,8 @@ class Timestamp {
   /**
    * Converts `time_t` to a `Timestamp`.
    *
-   * @param seconds_since_unix_epoch
-   *     @parblock
+   * @param seconds_since_unix_epoch A
+   * @parblock
    *     The number of seconds of UTC time since Unix epoch
    *     1970-01-01T00:00:00Z. Can be negative to represent dates before the
    *     epoch. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z
@@ -124,7 +124,7 @@ class Timestamp {
   /**
    * Converts `std::chrono::time_point` to a `Timestamp`.
    *
-   * @param time_point
+   * @param time_point A
    *     @parblock
    *     The time point with system clock's epoch, which is
    *     presumed to be Unix epoch 1970-01-01T00:00:00Z. Can be negative to
