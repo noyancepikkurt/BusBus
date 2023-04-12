@@ -69,6 +69,7 @@ final class UserViewController: UIViewController {
             }
         } else {
             UIAlertController.alertMessage(title: "Üzgünüz", message: "Eksik bilgi girdiniz, lütfen koltuk seçim ekranına dönüp tekrardan deneyiniz", vc: self)
+            self.activityIndicator.stopAnimating()
         }
     }
     
